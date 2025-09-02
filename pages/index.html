@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevate</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gko1vsj.css" />
+    <link href="../dist/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <!-- Top Nav -->
+      <nav class="top-nav container-fluid-sm flex items-center justify-between">
+        <div class="content white max-1200:text-center">
+          <p>This is the first example of a sitewide notice.</p>
+        </div>
+        <!-- Single button wrapper -->
+        <div id="top-btn-wrapper">
+          <a id="join-btn" href="javascript:void(0)" class="btn btn-yellow">Join Elavate</a>
+        </div>
+      </nav>
+
+      <!-- Bottom Nav -->
+      <nav id="bottom-nav" class="bottom-nav container-fluid-sm relative flex items-center justify-between bg-transparent transition-colors duration-300">
+        <div class="img min-1200:hidden cursor-pointer" id="menu-toggle">
+          <img src="../assets/images/hamburger-icon.svg" alt="Hamburger Icon" />
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="javascript:void(0)">
+            <div class="img">
+              <img src="../assets/images/elevate-logo.webp" alt="Logo" width="422" height="60" />
+            </div>
+          </a>
+        </div>
+
+        <!-- Nav wrapper -->
+        <div id="nav-wrapper" class="nav-wrapper mobile-menu">
+          <!-- Nav List -->
+          <ul class="nav-list-ul">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">In-salon Education</a></li>
+            <li><a href="#">Wellness</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <!-- Mobile button wrapper (inside dropdown) -->
+          <div id="mobile-btn-wrapper" class="mobile-btn-wrapper flex justify-center pt-6"></div>
+        </div>
+
+        <!-- Search -->
+        <div class="search" id="search-btn">
+          <div class="img">
+            <img src="../assets/images/search-icon.svg" alt="Search Icon" width="20" height="20" />
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar container-fluid-sm hidden py-28" id="search-bar">
+          <form action="">
+            <input type="text" class="w-full px-20 py-10" placeholder="search" />
+          </form>
+        </div>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <!-- Banner Start -->
+      <section class="hero-banner relative">
+        <video id="video" autoplay muted loop preload="metadata">
+          <source src="../assets/images/banner-video.mp4" />
+        </video>
+        <div class="container-fluid-lg video-title">
+          <div class="title-white title text-center">
+            <h1>Elevate Your Craft. Fuel Your Purpose. <span>Join a Movement.</span></h1>
+          </div>
+          <div class="sub-title white mt-20 text-center">
+            <p>More than education—it’s daily inspiration, growth, and a stylist community that lifts you up every day behind the chair.</p>
+          </div>
+          <div class="max-575:flex-wrap banner-btns mt-28 flex items-center justify-center gap-28">
+            <a href="javascript:void(0)" class="btn btn-b-yellow">Explore Memberships</a>
+            <a href="javascript:void(0)" class="btn btn-yellow">Donwload the App</a>
+          </div>
+        </div>
+        <!-- <div class="hero-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/images/hero-slide-img1.webp" alt="Slide 1" class="h-full w-full object-cover" />
+              <div class="container-fluid-lg">
+                <div class="title-white title text-center">
+                  <h1>Discover <span>Elevate Today</span></h1>
+                </div>
+                <div class="sub-title white mt-20 text-center">
+                  <p>Open Yourself Up To A Community of Artists</p>
+                </div>
+                <div class="btn-custom flex justify-center mt-28">
+                  <a href="javascript:void(0)" class="btn btn-b-yellow">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+              <img src="../assets/images/hero-slide-img2.webp" alt="Slide 2" class="h-full w-full object-cover" />
+              <div class="container-fluid-lg absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
+                <div class="title-white title text-center">
+                  <h1>Elevate Supports All <span>Your Inner Passion</span></h1>
+                </div>
+                <div class="sub-title white mt-20 text-center">
+                  <p>Without The Pressure or The Burnout</p>
+                </div>
+                <div class="btn-custom flex justify-center mt-28">
+                  <a href="javascript:void(0)" class="btn btn-b-yellow">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+              <img src="../assets/images/hero-slide-img3.webp" alt="Slide 2" class="h-full w-full object-cover" />
+              <div class="container-fluid-lg absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
+                <div class="title-white title text-center">
+                  <h1>Elevate Inspires & <span>Stays Cutting-edge</span></h1>
+                </div>
+                <div class="sub-title white mt-20 text-center">
+                  <p>Brought To You By Award-winning Blake Charles Salon</p>
+                </div>
+                <div class="btn-custom flex justify-center mt-28">
+                  <a href="javascript:void(0)" class="btn btn-b-yellow">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination hero-pagination"></div>
+        </div> -->
+      </section>
+      <!-- Banner End -->
+
+      <!-- Zigzag Section Start -->
+      <section class="zigzag-section">
+        <div class="container-fluid-lg">
+          <div class="zigzag-inner">
+            <div class="zigzag-left">
+              <div class="title">
+                <h2>Welcome to <span>Elevate your chair</span></h2>
+              </div>
+              <div class="content">
+                <p>We're redefining what it means to grow as a hairstylist.</p>
+                <p>Created by the award-winning team at Blake Charles Salon, Elevate Your Chair is your home for real education, real connection, and real transformation.</p>
+                <p>
+                  This isn’t just another class platform—it’s a daily source of fuel for your creativity, your business, and your mindset. Whether you're just starting out or leveling up, we’re here
+                  to walk with you—every step, every stage, every day.
+                </p>
+                <p>What makes us different? We focus on the wellness of the stylist behind the chair. Our mission is rooted in personal growth, emotional resilience, and purpose-driven careers.</p>
+                <p>
+                  We offer more than classes. We offer support, mentorship, and clarity—including Therapy Tuesdays, a monthly video series featuring therapists and mindset coaches discussing real
+                  topics that affect hairstylists—from burnout and anxiety to confidence and communication skills.
+                </p>
+              </div>
+              <div class="btn-custom mt-10">
+                <a href="javascript:void(0)" class="btn btn-yellow">Learn More</a>
+              </div>
+            </div>
+            <div class="zigzag-right">
+              <div class="img mobile-front">
+                <img src="../assets/images/mobile-front.webp" alt="Mobile Image" width="307" height="620" />
+              </div>
+              <div class="img mobile-back">
+                <img src="../assets/images/mobile-back.webp" alt="Mobile Image" width="307" height="596" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Zigzag Section End -->
+
+      <!-- Slider Section Start -->
+      <section class="slider-section">
+        <div class="container-fluid-sm">
+          <div class="title title-white text-center">
+            <h2>What Makes Us <span>Different</span></h2>
+          </div>
+          <div class="content white max-768:mt-20 mt-28 text-center">
+            <p>A focus on wellness, creativity, and purpose—not just technique</p>
+          </div>
+          <div class="card-slider swiper min-768:mt-55 mt-40">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-card">
+                  <div class="card-inner">
+                    <div class="img">
+                      <img src="/assets/images/inner-growth.svg" alt="Growth Icon" width="63" height="100" />
+                    </div>
+                    <div class="title-bold title-white text-center">
+                      <h6>Inner Growth</h6>
+                    </div>
+                    <div class="content white text-center">
+                      <p>Daily motivation delivered straight to your phone via The Morning Elevation</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-card">
+                  <div class="card-inner">
+                    <div class="img">
+                      <img src="/assets/images/innovation.svg" alt="Innovation Icon" width="91" height="78" />
+                    </div>
+                    <div class="title-bold title-white text-center">
+                      <h6>Inspiration & Innovation</h6>
+                    </div>
+                    <div class="content white text-center">
+                      <p>Earn badges and track your journey as you take classes, engage, and grow</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-card">
+                  <div class="card-inner">
+                    <div class="img">
+                      <img src="/assets/images/community.svg" alt="Community Icon" width="100" height="84" />
+                    </div>
+                    <div class="title-bold title-white text-center">
+                      <h6>Artist Community</h6>
+                    </div>
+                    <div class="content white text-center">
+                      <p>A thriving community of stylists to connect, learn, and grow with</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-card">
+                  <div class="card-inner">
+                    <div class="img">
+                      <img src="/assets/images/wellness.svg" alt="Growth Icon" width="90" height="96" />
+                    </div>
+                    <div class="title-bold title-white text-center">
+                      <h6>Emotional Wellness</h6>
+                    </div>
+                    <div class="content white text-center">
+                      <p>Therapy Tuesdays: Monthly wellness talks with certified therapists</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-card">
+                  <div class="card-inner">
+                    <div class="img">
+                      <img src="/assets/images/education.svg" alt="Education Icon" width="97" height="78" />
+                    </div>
+                    <div class="title-bold title-white text-center">
+                      <h6>Continued Education</h6>
+                    </div>
+                    <div class="content white text-center">
+                      <p>Expert-led education and real-world strategies that work behind the chair</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-slider-pagination">
+              <div class="img previous">
+                <img src="/assets/images/previous-arrow.svg" alt="Previous Icon" width="21" height="38" />
+              </div>
+              <div class="img next">
+                <img src="/assets/images/next-arrow.svg" alt="Next Icon" width="21" height="38" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Slider Section End -->
+
+      <!-- Pricing Section Start -->
+      <section class="pricing-section" style="background-image: url('../assets/images/pricing-bg-img.webp')">
+        <div class="container-fluid">
+          <div class="title text-center">
+            <h2>Pricing <span>Summary</span></h2>
+          </div>
+          <div class="title-bold price-tabs">
+            <button class="month-btn" data-plan="monthly"><span>Monthly</span></button>
+            <button data-plan="yearly"><span>Yearly</span></button>
+          </div>
+          <div class="pricing-slider swiper-container mt-65">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-plan="monthly">
+                <a href="javascript:void(0)">
+                  <div class="pricing-card">
+                    <div class="pricing-card-inner">
+                      <div class="price-badge">
+                        <div class="price-tag">
+                        <span>Online Class</span>
+                      </div>
+                      </div>
+                      <div class="title-bold text-center">
+                        <h5>Elevate Connect</h5>
+                      </div>
+                      <div class="price-content content">
+                        <p><span>$49</span> Month</p>
+                      </div>
+                      <div class="content text-center">
+                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide" data-plan="monthly">
+                <a href="javascript:void(0)">
+                  <div class="pricing-card">
+                    <div class="pricing-card-inner">
+                      <div class="price-badge">
+                        <div class="price-tag">
+                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                      </div>
+                      </div>
+                      <div class="title-bold text-center">
+                        <h5>Elevate Connect</h5>
+                      </div>
+                      <div class="price-content content">
+                        <p><span>$49</span> Month</p>
+                      </div>
+                      <div class="content text-center">
+                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide" data-plan="monthly">
+                <a href="javascript:void(0)">
+                  <div class="pricing-card">
+                    <div class="pricing-card-inner">
+                      <div class="price-badge">
+                        <div class="price-tag">
+                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                      </div>
+                      </div>
+                      <div class="title-bold text-center">
+                        <h5>Elevate Connect</h5>
+                      </div>
+                      <div class="price-content content">
+                        <p><span>$49</span> Month</p>
+                      </div>
+                      <div class="content text-center">
+                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide" data-plan="monthly">
+                <a href="javascript:void(0)">
+                  <div class="pricing-card">
+                    <div class="pricing-card-inner">
+                      <div class="price-badge">
+                        <div class="price-tag">
+                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                      </div>
+                      </div>
+                      <div class="title-bold text-center">
+                        <h5>Elevate Connect</h5>
+                      </div>
+                      <div class="price-content content">
+                        <p><span>$49</span> Month</p>
+                      </div>
+                      <div class="content text-center">
+                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide" data-plan="yearly">
+                <a href="javascript:void(0)">
+                  <div class="pricing-card">
+                    <div class="pricing-card-inner">
+                      <div class="price-badge">
+                        <div class="price-tag">
+                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                      </div>
+                      </div>
+                      <div class="title-bold text-center">
+                        <h5>Elevate Connect</h5>
+                      </div>
+                      <div class="price-content content">
+                        <p><del>$588</del><span>$529</span> Year</p>
+                      </div>
+                      <div class="content text-center">
+                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="btn-custom mt-55 flex justify-center">
+              <a href="javscript:void(0)" class="btn btn-black">Learn More</a>
+            </div>
+            <div class="card-slider-pagination">
+              <div class="img previous">
+                <img src="/assets/images/previous-arrow.svg" alt="Previous Icon" width="21" height="38" />
+              </div>
+              <div class="img next">
+                <img src="/assets/images/next-arrow.svg" alt="Next Icon" width="21" height="38" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Pricing Section End -->
+
+      <!-- Testimonial Section Start -->
+      <section class="testimonial-section bg-softwhite">
+        <div class="title-bold text-center">
+          <h2>Testimonials</h2>
+        </div>
+        <div class="testimonial-slider swiper mt-55">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="feedback">
+                  <div class="img left-quote">
+                    <img src="/assets/images/left-quote.svg" alt="Left Quote" width="28" height="21" />
+                  </div>
+                  <div class="content">
+                    <p>I went from stuck and uninspired to fully booked in 3 months.</p>
+                  </div>
+                  <div class="img right-quote">
+                    <img src="/assets/images/right-quote.svg" alt="Right Quote" width="28" height="21" />
+                  </div>
+                </div>
+                <div class="client-name content mt-28 text-center">
+                  <p>Name Goes Here</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="feedback">
+                  <div class="img left-quote">
+                    <img src="/assets/images/left-quote.svg" alt="Left Quote" width="28" height="21" />
+                  </div>
+                  <div class="content">
+                    <p>I went from stuck and uninspired to fully booked in 3 months.</p>
+                  </div>
+                  <div class="img right-quote">
+                    <img src="/assets/images/right-quote.svg" alt="Right Quote" width="28" height="21" />
+                  </div>
+                </div>
+                <div class="client-name content mt-28 text-center">
+                  <p>Name Goes Here</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="feedback">
+                  <div class="img left-quote">
+                    <img src="/assets/images/left-quote.svg" alt="Left Quote" width="28" height="21" />
+                  </div>
+                  <div class="content">
+                    <p>I went from stuck and uninspired to fully booked in 3 months.</p>
+                  </div>
+                  <div class="img right-quote">
+                    <img src="/assets/images/right-quote.svg" alt="Right Quote" width="28" height="21" />
+                  </div>
+                </div>
+                <div class="client-name content mt-28 text-center">
+                  <p>Name Goes Here</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="feedback">
+                  <div class="img left-quote">
+                    <img src="/assets/images/left-quote.svg" alt="Left Quote" width="28" height="21" />
+                  </div>
+                  <div class="content">
+                    <p>I went from stuck and uninspired to fully booked in 3 months.</p>
+                  </div>
+                  <div class="img right-quote">
+                    <img src="/assets/images/right-quote.svg" alt="Right Quote" width="28" height="21" />
+                  </div>
+                </div>
+                <div class="client-name content mt-28 text-center">
+                  <p>Name Goes Here</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="feedback">
+                  <div class="img left-quote">
+                    <img src="/assets/images/left-quote.svg" alt="Left Quote" width="28" height="21" />
+                  </div>
+                  <div class="content">
+                    <p>I went from stuck and uninspired to fully booked in 3 months.</p>
+                  </div>
+                  <div class="img right-quote">
+                    <img src="/assets/images/right-quote.svg" alt="Right Quote" width="28" height="21" />
+                  </div>
+                </div>
+                <div class="client-name content mt-28 text-center">
+                  <p>Name Goes Here</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="feedback">
+                  <div class="img left-quote">
+                    <img src="/assets/images/left-quote.svg" alt="Left Quote" width="28" height="21" />
+                  </div>
+                  <div class="content">
+                    <p>I went from stuck and uninspired to fully booked in 3 months.</p>
+                  </div>
+                  <div class="img right-quote">
+                    <img src="/assets/images/right-quote.svg" alt="Right Quote" width="28" height="21" />
+                  </div>
+                </div>
+                <div class="client-name content mt-28 text-center">
+                  <p>Name Goes Here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slider-pagination">
+            <div class="img previous">
+              <img src="/assets/images/previous-icon.svg" alt="Previous Icon" width="21" height="38" />
+            </div>
+            <div class="img next">
+              <img src="/assets/images/next-icon.svg" alt="Next Icon" width="21" height="38" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonial Section End -->
+
+      <!-- Journey Zigzag Section Start -->
+      <section class="journey-section">
+        <div class="container-fluid-lg">
+          <div class="journey-inner">
+            <div class="journey-left">
+              <div class="img front-view">
+                <img src="/assets/images/journey-mobile-front.webp" alt="Mobile Front" width="307" height="596" />
+              </div>
+              <div class="img back-view">
+                <img src="/assets/images/mobile-back.webp" alt="Mobile Back" width="307" height="596" />
+              </div>
+            </div>
+            <div class="journey-right">
+              <div class="title title-white">
+                <h2>Your Journey <span>Starts in the app</span></h2>
+              </div>
+              <div class="content white">
+                <p>Everything happens in our all-in-one platform:</p>
+              </div>
+              <ul class="global-list">
+                <li>24/7 access to our education library</li>
+                <li>Live and in-person classes</li>
+                <li>Daily content drops and motivation</li>
+                <li>Therapy Tuesdays with licensed experts</li>
+                <li>Class booking, community boards, and more</li>
+              </ul>
+              <div class="content white">
+                <p>Download the app to start your membership and take your next step.</p>
+              </div>
+              <div class="btn-custom">
+                <a href="javascript:void(0)" class="btn btn-b-yellow">
+                  <div class="img">
+                    <img src="/assets/images/apple-icon.svg" alt="Apple Icon" width="24" height="24">
+                  </div>
+                  app store</a>
+                <a href="javascript:void(0)" class="btn btn-b-yellow">
+                  <div class="img">
+                    <img src="/assets/images/play-store-icon.svg" alt="Play Store icon" width="24" height="24">
+                  </div>google play</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Journey Zigzag Section End -->
+
+      <!-- Stylist Section Start -->
+      <section class="stylist-section">
+        <div class="container-fluid-lg">
+          <div class="stylist-inner">
+            <div class="title text-center">
+              <h2>Built for Stylists <span>at Every Stage</span></h2>
+            </div>
+            <div class="content text-center">
+              <p>Whether you're…</p>
+            </div>
+            <div class="stylist-grid">
+              <div class="stylist-card">
+                <div class="img">
+                  <img src="/assets/images/grid-img1.webp" alt="Grid Image" width="215" height="163" />
+                </div>
+                <div class="content text-center">
+                  <p>Fresh out of beauty school</p>
+                </div>
+              </div>
+              <div class="stylist-card">
+                <div class="img">
+                  <img src="/assets/images/grid-img2.webp" alt="Grid Image" width="215" height="163" />
+                </div>
+                <div class="content text-center">
+                  <p>Rebuilding your clientele</p>
+                </div>
+              </div>
+              <div class="stylist-card">
+                <div class="img">
+                  <img src="/assets/images/grid-img3.webp" alt="Grid Image" width="215" height="163" />
+                </div>
+                <div class="content text-center">
+                  <p>Burned out and ready to feel inspired again</p>
+                </div>
+              </div>
+              <div class="stylist-card">
+                <div class="img">
+                  <img src="/assets/images/grid-img4.webp" alt="Grid Image" width="215" height="163" />
+                </div>
+                <div class="content text-center">
+                  <p>Ready to lead and grow like never before—</p>
+                </div>
+              </div>
+            </div>
+            <div class="content text-center">
+              <p>You belong here.</p>
+            </div>
+            <div class="btn-custom">
+              <a href="javascript:void(0)" class="btn btn-yellow">Contact Us Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stylist Section End -->
+    </main>
+
+    <footer class="footer bg-black py-55">
+      <div class="container-fluid">
+        <div class="top-content">
+          <div class="title-bold title-white">
+            <h5>Follow Us</h5>
+          </div>
+          <div class="title-bold insta-handle">
+            <h5><a href="javascript:void(0)">@elevateyourchair</a></h5>
+          </div>
+        </div>
+        <!-- <div class="footer-grid">
+          <div class="img">
+            <img src="/assets/images/footer-img1.webp" alt="Footer Image" />
+          </div>
+          <div class="img">
+            <img src="/assets/images/footer-img2.webp" alt="Footer Image" />
+          </div>
+          <div class="img">
+            <img src="/assets/images/footer-img3.webp" alt="Footer Image" />
+          </div>
+          <div class="img">
+            <img src="/assets/images/footer-img4.webp" alt="Footer Image" />
+          </div>
+        </div> -->
+        <div class="bottom-content">
+          <div class="newsletter">
+            <div class="title-bold">
+              <h5>Want To Elevate Yourself?</h5>
+            </div>
+            <div class="content">
+              <p>Join our newsletter to receive a free e-book as well as additional literature, news, and upcoming Morning Elevation sessions for daily devotionals.</p>
+            </div>
+            <div class="news-letter-form"></div>
+          </div>
+          <div class="social-media-handle">
+            <div class="img">
+              <img src="/assets/images/footer-logo.svg" alt="Footer Logo" width="422" height="60" />
+            </div>
+            <div class="footer-pages">
+              <ul class="footer-list">
+                <li><a href="javascript:void(0)">Blake Charles Salon</a></li>
+                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                <li><a href="javascript:void(0)">Terms & Condition</a></li>
+                <li><a href="javascript:void(0)">Accesibilty Statement</a></li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <div class="content">
+                <p>©2025 Elevate Your Chair</p>
+              </div>
+              <div class="website-link">
+                <a href="https://techyscouts.com/" class="techyscouts-credit-link" aria-label="techyscouts-logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 0 3700 552" id="techyscouts-logo" aria-labelledby="techyscouts-logo-title" role="img">
+                    <path
+                      id="techyscouts-logo-heart"
+                      fill="#E3CCA4"
+                      style="transform-origin: 10% 50%"
+                      d="M436 257L255 427 73 257a81 81 0 0 1-25-62c0-23 4-42 22-59 17-15 38-23 62-23 23 0 45 14 61 29l62 54 62-54c16-15 38-29 61-29 24 0 45 8 61 23 19 17 23 36 23 59 0 24-7 46-26 62m32-154c-50-46-130-46-179 0l-34 30-34-30c-49-46-130-46-179 0-56 51-56 134 0 185l213 196 213-196c56-51 56-134 0-185"></path>
+                    <path id="techyscouts-logo-line-1" fill="#fff" d="M803 372L1016 0l34 20-213 372-34-20z"></path>
+                    <path id="techyscouts-logo-line-2" fill="#fff" d="M879 552l-33-20 213-372 33 20-213 372z"></path>
+                    <path
+                      id="techyscouts-logo-text"
+                      d="M3491.171 318.855c11.336 52.417-38.612 83.584-85.725 83.584-36.132 0-80.058-20.542-84.308-60.563l-.355-2.48 5.668-.708.354 2.48c3.897 37.188 45.343 55.959 78.995 55.959 43.217 0 89.976-27.98 79.704-77.21-15.941-73.667-155.865-6.375-162.241-98.814-1.417-14.875 2.48-29.396 11.69-41.438 36.132-46.75 138.152-40.73 150.196 23.376l.355 2.833-5.314 1.062-.354-2.833c-2.126-10.27-6.376-19.125-13.461-26.917-15.232-16.292-39.675-23.021-61.992-22.667-23.38.354-49.947 8.854-64.825 28.334-8.856 10.98-12.044 24.083-10.981 37.896 6.376 86.772 145.591 18.771 162.594 98.106zm-254.34 82.168h-5.314V157.707h-85.725v-5.667h176.764v5.667h-85.725v243.316zm-198.366 1.77c-41.092 0-86.788-24.083-86.788-70.125V152.394h5.667v180.628c0 42.855 43.217 64.105 81.12 64.105 37.904 0 81.121-21.25 81.121-64.46V152.395h5.668v180.628c0 45.688-46.05 69.772-86.788 69.772zm-239.105.709c-34.715 0-66.596-14.167-89.267-37.542-22.672-23.021-37.195-54.897-37.195-89.96 0-35.063 14.523-66.938 37.195-89.96 22.67-23.375 54.552-37.542 89.267-37.542 35.07 0 66.597 14.167 89.622 37.542 22.671 23.022 37.195 54.897 37.195 89.96 0 35.063-14.524 66.939-37.195 89.96-23.025 23.375-54.552 37.542-89.622 37.542zm85.726-213.212c-21.963-22.312-52.427-36.125-85.726-36.125-33.298 0-63.408 13.813-85.37 36.125-21.61 21.959-35.425 52.064-35.425 85.71 0 33.646 13.816 63.75 35.424 85.71 21.963 22.312 52.073 36.125 85.371 36.125 33.299 0 63.763-13.813 85.726-36.125 21.608-21.96 35.07-52.064 35.07-85.71 0-33.646-13.462-63.751-35.07-85.71zM2544.67 394.648c31.882 0 60.93-13.459 81.83-35.063 9.564-9.917 17.711-21.25 23.379-34.355h6.022c-6.022 14.52-14.878 27.625-25.505 38.605-21.963 22.667-52.073 36.48-85.726 36.48-33.652 0-63.762-13.813-85.725-36.48-21.608-22.313-35.424-53.126-35.424-87.48 0-34.001 13.816-64.814 35.424-87.127 21.963-22.667 52.073-36.48 85.725-36.48 33.653 0 63.763 13.813 85.726 36.48 10.627 10.98 19.483 24.084 25.505 38.605h-6.022c-5.668-13.105-13.815-24.792-23.38-34.71-20.9-21.604-49.947-34.708-81.829-34.708-31.88 0-60.928 13.104-81.828 34.709-20.9 21.604-34.007 51-34.007 83.23 0 32.584 13.107 61.98 34.007 83.23 20.9 21.605 49.947 35.064 81.828 35.064zm-228.124 7.791c-36.132 0-80.058-20.542-84.309-60.563l-.354-2.48 5.668-.708.354 2.48c3.897 37.188 45.343 55.959 78.995 55.959 43.217 0 89.977-27.98 79.704-77.21-15.941-73.667-155.865-6.375-162.24-98.814-1.418-14.875 2.479-29.396 11.689-41.438 36.132-46.75 138.152-40.73 150.196 23.376l.355 2.833-5.314 1.062-.354-2.833c-2.126-10.27-6.376-19.125-13.461-26.917-15.232-16.292-39.675-23.021-61.992-22.667-23.38.354-49.947 8.854-64.825 28.334-8.856 10.98-12.044 24.083-10.981 37.896 6.376 86.772 145.591 18.771 162.594 98.106 11.336 52.417-38.611 83.584-85.725 83.584zm-182.426-2.479h-5.668V297.605l-91.039-145.211h6.73l87.143 139.544 87.143-139.544h6.73l-91.039 145.21V399.96zm-120.08-122.897h-155.51V399.96h-5.313V152.394h5.314V271.75h155.51V152.394h5.668V399.96h-5.668V277.063zm-298.26 117.585c31.881 0 60.929-13.459 81.829-35.063 9.564-9.917 17.711-21.25 23.38-34.355h6.021c-6.022 14.52-14.878 27.625-25.505 38.605-21.962 22.667-52.073 36.48-85.725 36.48-33.653 0-63.763-13.813-85.726-36.48-21.608-22.313-35.423-53.126-35.423-87.48 0-34.001 13.815-64.814 35.423-87.127 21.963-22.667 52.073-36.48 85.726-36.48 33.652 0 63.763 13.813 85.725 36.48 10.627 10.98 19.483 24.084 25.505 38.605h-6.022c-5.668-13.105-13.815-24.792-23.38-34.71-20.9-21.604-49.947-34.708-81.828-34.708-31.882 0-60.929 13.104-81.829 34.709-20.9 21.604-34.007 51-34.007 83.23 0 32.584 13.107 61.98 34.007 83.23 20.9 21.605 49.947 35.064 81.829 35.064zm-277.365 5.312V152.394h136.736v5.313h-131.068v115.46h128.234v5.666h-128.234v115.815h131.776v5.312h-137.444zm-106.975 1.063h-5.314V157.707h-85.725v-5.667h176.764v5.667h-85.725v243.316z"
+                      style="fill: none; stroke: #fff; stroke-width: 16"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="social-media-icon">
+                <a href="javascript:void(0)">
+                  <img src="/assets/images/instagram.svg" alt="instagram icon" width="24" height="24">
+                </a>
+                <a href="javascript:void(0)">
+                  <img src="/assets/images/tiktok.svg" alt="tiktok icon" width="20" height="23">
+                </a>
+                <a href="javascript:void(0)">
+                  <img src="/assets/images/youtube.svg" alt="youtube icon" width="23" height="17">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="../assets/js/script.js"></script>
+</html>

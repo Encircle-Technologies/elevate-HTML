@@ -1,0 +1,103 @@
+*,
+::before,
+::after {
+    @apply box-border;
+}
+
+body {
+    @apply font-body relative overflow-x-hidden text-black antialiased text-body-2 m-0 p-0;
+}
+
+p {
+    @apply m-0 text-body-2 leading-16 font-normal font-body text-slate-gray;
+}
+
+a {
+    @apply no-underline;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  @apply outline-0 no-underline;
+  box-shadow: none;
+}
+
+button {
+  @apply bg-transparent border-0;
+}
+
+a:hover {
+  @apply transition-all duration-300;
+}
+
+ul {
+    @apply p-0 mt-0;
+}
+
+ul li {
+  @apply list-none;
+}
+
+img {
+  @apply block;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    @apply font-heading uppercase;
+}
+
+h1, .h1 {
+    @apply text-heading-1 leading-64 max-1440:text-heading-1-tablet max-1440:leading-48 max-768:text-heading-3-tablet;
+}
+
+h2, .h2 {
+    @apply text-heading-2 leading-48 max-1440:text-heading-2-tablet max-1023:text-heading-1-mobile max-1023:leading-32;
+}
+
+h3, .h3 {
+    @apply text-heading-3 leading-32 max-1023:text-heading-3-mobile max-1023:leading-24;
+}
+
+h4, .h4 {
+    @apply text-heading-4 leading-28;
+}
+
+h5, .h5 {
+    @apply text-heading-5 leading-24;
+}
+
+h6, .h6 {
+    @apply text-heading-6 leading-20;
+}
+
+.content {
+    @apply relative flex flex-col w-full;
+}
+
+.title span {
+    @apply font-bold block;
+}
+
+.content p {
+    @apply text-black text-body-2 leading-20 font-normal not-italic relative block m-0 p-0 font-body;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content p + p {
+    @apply mt-20;
+}
+
+.content.bold p {
+    @apply font-bold;
+}
+
+.content.white p {
+    @apply text-white;
+}
+
+.content.black p {
+    @apply text-black;
+}

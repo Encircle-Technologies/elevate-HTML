@@ -1,0 +1,243 @@
+/* Header Start */
+header {
+  @apply z-50;
+  transition: all 0.3s ease-in-out;
+}
+
+header.sticky {
+  @apply sticky top-0;
+}
+
+header .logo img {
+  @apply max-575:w-197 max-575:h-28
+}
+
+.top-nav {
+  @apply bg-black flex justify-between items-center py-14;
+}
+
+.top-nav .content {
+  @apply min-1200:w-7/12;
+}
+
+.bottom-nav {
+  @apply flex justify-between items-center py-20 absolute transition-colors duration-300 bg-transparent z-10;
+}
+
+.bottom-nav.scrolled {
+  @apply bg-black;
+}
+
+.nav-list-ul {
+  @apply flex gap-30 items-center max-1200:flex-col max-1400:gap-15 max-1200:items-start max-1200:ps-24 max-1200:pt-20;
+}
+
+.nav-list-ul li {
+  @apply max-1200:py-20;
+}
+
+.nav-list-ul li a {
+  @apply text-white uppercase font-body text-body-2 font-normal transition-all duration-500 ease-in-out max-1200:text-black;
+}
+
+.nav-list-ul li a:hover {
+  @apply text-yellow;
+}
+
+header .search img {
+  @apply cursor-pointer;
+}
+
+header .search-bar {
+  @apply absolute top-full w-full left-0 bg-black items-center;
+}
+
+header .search-bar.active {
+  @apply flex items-center;
+}
+
+header .search-bar form {
+  @apply w-full;
+}
+
+header .search-bar input {
+  @apply bg-white w-full capitalize;
+  background-image: url('/assets/images/magnifier-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: top 12px left 10px;
+  padding-inline-start: 40px;
+}
+
+header .search-bar input::placeholder {
+  @apply opacity-50 text-black;
+}
+
+.nav-wrapper.mobile-menu {
+  @apply absolute top-full left-0 max-1200:w-full bg-white opacity-0 invisible transition-all duration-300 ease-in-out flex-col min-1200:static min-1200:flex min-1200:flex-row min-1200:bg-transparent min-1200:opacity-100 min-1200:visible;
+}
+
+.nav-wrapper.mobile-menu.hidden {
+  @apply opacity-0 invisible;
+}
+
+.nav-wrapper.mobile-menu.active {
+  @apply opacity-100 visible;
+}
+
+.mobile-btn-wrapper {
+  @apply bg-black pt-20 pb-40;
+}
+
+.search.active img {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(15%) saturate(305%) hue-rotate(0deg) brightness(90%) contrast(91%);
+}
+/* Header End */
+
+/* Footer Start */
+footer .top-content {
+    @apply flex items-center justify-between flex-wrap max-768:justify-center max-768:gap-20;
+}
+
+footer .insta-handle h5 {
+    @apply text-yellow;
+}
+
+footer .footer-grid {
+    @apply grid grid-cols-4 gap-28 mt-20;
+}
+
+footer .footer-grid .img {
+    @apply relative pt-[100%];
+}
+
+footer .footer-grid img {
+    @apply w-full absolute top-0 left-0;
+}
+
+footer .bottom-content {
+    @apply flex justify-between items-center mt-55 max-1199:flex-wrap max-1199:justify-center max-1199:gap-40;
+}
+
+footer .newsletter {
+    @apply max-w-482;
+}
+
+footer .newsletter h5, footer .newsletter .content p {
+    @apply text-softwhite mt-20 leading-20;
+}
+
+footer .footer-pages {
+    @apply min-1199:mt-89 mt-28;
+}
+
+footer ul {
+    @apply flex items-center gap-40 border border-b-yellow pb-20 max-768:flex-col;
+}
+
+footer ul li a {
+    @apply text-softwhite max-768:mt-20;
+}
+
+footer .copyright {
+    @apply flex justify-between items-center mt-30 max-768:flex-col max-768:gap-20;
+}
+
+footer .copyright .content {
+  @apply w-auto;
+}
+
+footer .copyright p {
+    @apply text-softwhite font-extrabold;
+}
+
+footer .website-link {
+    @apply flex items-center gap-6;
+}
+
+footer .social-media-icon {
+  @apply flex gap-20 items-center;
+}
+
+footer .social-media-icon a {
+  @apply bg-yellow p-8 rounded-full w-40 h-40 flex items-center;
+}
+
+footer .social-media-icon a:hover {
+  @apply bg-softwhite;
+}
+/* Footer End */
+
+/* techyscouts logo start */
+
+#techyscouts-logo {
+    @apply inline-block w-auto h-[20px]; 
+    fill: currentColor;
+    vertical-align: middle;
+  }
+  
+  .techyscouts-credit-link:hover #techyscouts-logo-heart,
+    .techyscouts-credit-link:focus #techyscouts-logo-heart {
+    animation: ts-heart-beat 2s infinite ease-in-out 0.6s;
+  }
+  
+  .techyscouts-credit-link:hover #techyscouts-logo-text,
+    .techyscouts-credit-link:focus #techyscouts-logo-text {
+    animation: ts-draw-logo 2s forwards;
+  }
+  
+  .techyscouts-credit-link:hover #techyscouts-logo-line-1,
+    .techyscouts-credit-link:hover #techyscouts-logo-line-2,
+    .techyscouts-credit-link:focus #techyscouts-logo-line-1,
+    .techyscouts-credit-link:focus #techyscouts-logo-line-2 {
+    animation: ts-swoop-down 0.5s forwards ease-out;
+  }
+  
+  .techyscouts-credit-link:hover #techyscouts-logo-line-2,
+    .techyscouts-credit-link:focus #techyscouts-logo-line-2 {
+    animation-name: ts-swoop-up;
+  }
+  
+  @keyframes ts-heart-beat {
+    5% {
+      transform: scale(1.1);
+      fill: #E3CCA4;
+    }
+  
+    10% {
+      transform: scale(0.9);
+    }
+  
+    15% {
+      transform: scale(1.2);
+      fill: #E3CCA4;
+    }
+  
+    40% {
+      transform: scale(1);
+      stroke-width: 0;
+    }
+  }
+  
+  @keyframes ts-draw-logo {
+    0% {
+      stroke-dasharray: 2600;
+      stroke-dashoffset: 2600;
+    }
+  
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes ts-swoop-down {
+    0% {
+      transform: translateY(-100%) rotate(10deg);
+    }
+  }
+  
+  @keyframes ts-swoop-up {
+    0% {
+      transform: translateY(100%) rotate(-10deg);
+    }
+  }

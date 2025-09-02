@@ -1,0 +1,437 @@
+/* Hero Section Start */
+.hero-banner {
+    @apply relative min-1024:h-880 h-screen;
+}
+
+.hero-banner::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full pointer-events-none;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(69.68% 48.01% at 50% 51.99%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero-banner .container-fluid-lg {
+    @apply absolute top-1/2 -translate-y-1/2 z-5;
+}
+
+.hero-banner video {
+    @apply block min-1024:max-h-880 h-full w-full object-cover object-top;
+}
+/* 
+.hero-banner .video-title {
+    @apply hidden;
+} */
+
+.hero-banner .hero-slider {
+    @apply hidden min-1024:max-h-880 h-full w-full object-cover relative;
+}
+
+.hero-banner .hero-slider .swiper-slide {
+    @apply relative;
+}
+
+.hero-banner .hero-slider .swiper-slide::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full pointer-events-none;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(69.68% 48.01% at 50% 51.99%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero-banner .hero-slider img {
+    @apply absolute top-0 w-full h-full left-0;
+}
+
+.hero-banner.show-slider .hero-video {
+    @apply hidden;
+}
+
+.hero-banner.show-slider .hero-slider {
+    @apply block;
+}
+
+.hero-pagination {
+    @apply absolute !top-[78.4%];
+}
+
+.hero-banner .swiper-pagination-bullet {
+    @apply w-40 h-10 border-2 border-white rounded-none opacity-100 bg-transparent;
+}
+
+.hero-banner .swiper-pagination-bullet-active {
+    @apply bg-white;
+}
+
+.hero-banner .title h1 {
+    @apply leading-77 max-575:leading-38 max-990:leading-55;
+}
+
+.hero-banner .title span {
+    @apply mt-20 max-575:mt-10 max-575:text-heading-3-tablet;
+}
+
+.hero-banner .sub-title {
+    @apply max-w-1312 mx-auto w-full;
+}
+
+.hero-banner .sub-title p {
+    @apply leading-34 max-575:leading-22 max-575:text-18;
+}
+
+.banner-btns {
+    @apply max-575:gap-10;
+}
+
+.banner-btns .btn {
+    @apply max-575:min-w-245;
+}
+/* Hero Section End */
+
+/* Zigzag Section Start */
+.zigzag-section {
+    @apply min-1024:py-80 py-55;
+}
+
+.zigzag-section h2 {
+    @apply leading-58 max-768:leading-38;
+}
+
+.zigzag-section .zigzag-inner {
+    @apply flex items-center gap-80 flex-wrap-reverse min-1200:flex-nowrap max-1200:gap-50 max-1200:justify-center relative justify-between;
+}
+
+.zigzag-section .zigzag-left {
+    @apply flex flex-col gap-20 border-l-2 border-gray ps-40 min-1199:max-w-750 min-1600:w-full min-575:py-20 max-575:ps-20;
+}
+
+.zigzag-section .content p {
+    @apply text-slate-gray;
+}
+
+.zigzag-section .zigzag-right {
+    @apply relative;
+}
+
+.zigzag-section .mobile-front {
+    @apply absolute min-1199:-top-25 -left-[49%] z-5 w-full max-990:relative max-990:-left-[20%];
+}
+
+.zigzag-section .mobile-front img {
+    @apply min-1199:h-660 h-auto;
+}
+
+.zigzag-section .mobile-back {
+    @apply rotate-10 max-990:absolute max-990:top-10 w-full max-990:rotate-10 max-990:left-[30%] max-575:rotate-17 max-575:-top-4 max-575:left-[19%];
+}
+
+.zigzag-section .mobile-back img {
+    @apply max-575:h-305;
+}
+
+.zigzag-section img {
+    @apply max-1441:w-280 h-auto max-1365:w-200 max-575:w-150;
+}
+
+/* Zigzag Section End */
+
+/* Slider Section Start */
+.slider-section {
+    @apply max-768:py-80 py-55 bg-black;
+}
+
+.slider-section .title span {
+    @apply inline
+}
+
+.slider-section .container-fluid-sm {
+    @apply max-1200:px-0;
+}
+
+.slider-section .swiper-slide {
+    @apply h-auto;
+}
+
+.slider-section .slider-card {
+    @apply h-full relative;
+}
+
+.slider-section .slider-card .card-inner {
+    @apply flex flex-col p-28 h-full items-center border-2 border-yellow justify-center;
+}
+
+.slider-section .slider-card h6 {
+    @apply relative max-w-202 mt-28 leading-24;
+}
+
+.slider-section .slider-card .content {
+    @apply mt-14
+}
+
+.slider-section .slider-card img {
+    @apply w-100 h-100 relative;
+}
+
+.slider-card::before {
+    @apply content-[''] absolute top-0 left-0 h-full w-full;
+    background: linear-gradient(359.91deg, rgba(26, 26, 26, 0.88) 23.44%, rgba(26, 26, 26, 0.704) 49.04%, rgba(26, 26, 26, 0.5896) 60.42%, rgba(26, 26, 26, 0) 80.33%), rgba(94, 94, 94, 0.2);
+}
+
+section .card-slider-pagination {
+    @apply max-1199:flex items-center gap-28 max-1199:visible justify-center mt-40 hidden;
+}
+
+.card-slider-pagination img {
+    @apply w-40 h-40 cursor-pointer;
+}
+/* Slider Section End */
+
+/* Pricing Section Start */
+.pricing-section {
+    @apply py-80 bg-no-repeat bg-center bg-cover relative block w-full bg-[url('../assets/images/pricing-bg-img.webp')];
+}
+
+.pricing-section::before {
+    @apply content-[""] absolute top-0 left-0 h-full w-full;
+    background-image: linear-gradient(360deg, rgba(214, 207, 201, 0.88) 10.33%, rgba(214, 207, 201, 0) 28.92%, rgba(214, 207, 201, 0) 64.02%, rgba(214, 207, 201, 0.88) 75.64%);
+}
+
+.pricing-section >* {
+    @apply relative;
+}
+
+.pricing-section .price-tabs {
+    @apply flex items-center gap-20 justify-center mt-55;
+}
+
+.price-tabs button span {
+  @apply cursor-pointer border-b-2 border-transparent transition-all duration-300 relative font-heading font-bold text-body-1 text-black opacity-50 uppercase;
+}
+
+.price-tabs button.active span {
+  @apply border-b-2 border-black text-black opacity-100;
+}
+
+.price-tabs .month-btn {
+    @apply border-r-2 border-black pe-20;
+}
+
+.pricing-section span {
+    @apply inline;
+}
+
+.pricing-section .swiper-slide {
+    @apply h-auto
+}
+
+.pricing-section .pricing-card {
+    @apply h-full relative transition-all duration-500 ease-out;
+}
+
+.pricing-section .pricing-card:hover {
+    @apply scale-105 -translate-y-3;
+}
+
+.pricing-section .pricing-card-inner {
+    @apply flex flex-col p-28 h-full items-center justify-center bg-white border-4 border-transparent pt-10;
+}
+
+.pricing-section .pricing-card:hover .pricing-card-inner {
+    @apply border-black;
+}
+
+.pricing-section .price-badge {
+    @apply flex w-full items-start pb-10 -ms-65;
+}
+
+.pricing-card:hover::before {
+    @apply content-[''] absolute top-0 left-0 h-full w-full;
+    background: linear-gradient(359.91deg, rgba(227, 227, 227, 0.88) 23.44%, rgba(227, 227, 227, 0.704) 49.04%, rgba(227, 227, 227, 0.5896) 60.42%, rgba(227, 227, 227, 0) 80.33%), rgba(227, 227, 227, 0.2);
+}
+
+.pricing-section .title-bold h5, .pricing-section .content p {
+    @apply relative;
+}
+
+.pricing-card-inner .price-content {
+    @apply mt-10 mb-28;
+}
+
+.pricing-card-inner .price-content span {
+    @apply border-r-2 pe-8 border-[rgba(26,26,26,0.8)];
+}
+
+.pricing-card-inner .price-content del {
+    @apply opacity-40 pe-5;
+}
+
+.pricing-card-inner .price-content p {
+    @apply text-heading-6 text-center !text-black;
+}
+
+.pricing-card-inner .content p {
+    @apply text-slate-gray leading-20;
+}
+
+.pricing-section .price-tag {
+    @apply uppercase bg-yellow text-body-4 font-extrabold py-8 px-10 top-10 left-0;
+}
+/* Pricing Section End */
+
+/* Testimonial Section Start */
+.testimonial-section {
+    @apply py-80;
+}
+
+.testimonial-section .feedback {
+    @apply flex justify-between gap-28 relative max-768:justify-center;
+}
+
+.testimonial-section .feedback .img {
+    @apply shrink-0 relative;
+}
+
+.testimonial-section .feedback .left-quote {
+    @apply max-768:absolute max-768:top-0 max-767:left-110 max-479:left-70;
+}
+
+.testimonial-section .feedback .right-quote {
+    @apply max-768:absolute max-768:top-0 max-767:right-110 max-479:right-70;
+}
+
+.testimonial-section .feedback img {
+    @apply w-28 h-28;
+}
+
+.testimonial-section .testimonial-card {
+    @apply border-2 border-black p-28;
+}
+
+.testimonial-card::before {
+    @apply content-[''] absolute top-0 left-0 h-full w-full;
+    background: linear-gradient(359.91deg, rgba(249, 249, 249, 0.88) 23.44%, rgba(249, 249, 249, 0.704) 49.04%, rgba(249, 249, 249, 0.5896) 60.42%, rgba(249, 249, 249, 0) 80.33%), rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-section .feedback .content {
+    @apply w-auto max-768:mt-40;
+}
+
+.testimonial-section .feedback .content p {
+    @apply text-heading-5 text-slate-gray leading-29 text-center max-w-509;
+}
+
+.testimonial-slider-pagination {
+    @apply flex justify-center gap-28;
+}
+
+.testimonial-slider-pagination img {
+    @apply w-40 h-40 mt-55 cursor-pointer;
+}
+
+.testimonial-section .client-name p {
+    @apply text-slate-gray font-bold uppercase font-heading relative;
+}
+/* Testimonial Section End */
+
+/* Journey Section Start */
+.journey-section {
+    @apply py-80 relative;
+}
+
+.journey-section::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.68%, rgba(0, 0, 0, 0.4) 91.4%), radial-gradient(
+  45% 90% at 15% 30%,
+  #F4EEE3 0%, 
+  #C2B7A3 30.65%, 
+  #000000 100%
+);
+}
+
+.journey-section .journey-inner {
+    @apply flex items-center min-1600:gap-250 max-1600:gap-150 relative max-1199:flex-wrap justify-center max-769:gap-80 max-575:gap-40;
+}
+
+.journey-section .journey-right {
+    @apply flex flex-col gap-20 relative;
+}
+
+.journey-section .global-list {
+    @apply flex flex-col gap-10;
+}
+
+.journey-section .global-list li {
+    @apply text-white relative ps-20;
+}
+
+.journey-section .global-list li::before {
+    content: "";
+    @apply absolute top-8 left-0 w-8 h-8 bg-yellow rounded-full;
+}
+
+.journey-section .journey-left {
+    @apply relative;
+}
+
+.journey-section .front-view {
+    z-index: 5;
+    @apply relative ps-140 max-768:ps-100 max-575:ps-70;
+}
+
+.journey-section .back-view {
+    @apply -rotate-10 absolute top-0 w-full left-40 max-768:left-20 max-575:left-0;
+}
+
+.journey-section img {
+    @apply h-auto max-575:h-350 max-575:w-150;
+}
+
+.journey-section .btn-custom {
+    @apply flex items-center gap-10 mt-10 flex-wrap;
+}
+
+.journey-section .btn-custom a {
+    @apply flex items-center gap-10 mt-10 max-575:min-w-199;
+}
+
+.journey-section .btn-custom a img {
+    @apply w-24 h-24;
+}
+/* Journey Section End */
+
+/* Stylist Section Start */
+.stylist-section {
+    @apply py-80 bg-[url('../assets/images/stylist-bg-img.webp')] bg-cover bg-center bg-no-repeat relative;
+}
+
+.stylist-section::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    background-color: rgba(214, 207, 201, 0.8);
+}
+
+.stylist-section .stylist-inner {
+    @apply max-w-1000 mx-auto p-28 bg-white relative;
+}
+
+.stylist-inner .content p {
+    @apply font-extrabold mt-28 max-479:mt-20;
+}
+
+.stylist-inner .stylist-grid {
+    @apply grid grid-cols-4 gap-28 mt-28 max-768:grid-cols-2 max-479:grid-cols-1 max-479:gap-20;
+}
+
+.stylist-grid .img {
+    @apply relative pt-[75.81%];
+}
+
+.stylist-grid .img img {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.stylist-grid .content p {
+    @apply font-extrabold mt-10 max-w-180 mx-auto;
+}
+
+.stylist-section .btn-custom {
+    @apply mt-38 text-center max-479:mt-30;
+}
+/* Stylist Section End */
