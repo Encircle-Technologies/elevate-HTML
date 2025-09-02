@@ -14,30 +14,41 @@
     <header>
       <!-- Top Nav -->
       <nav class="top-nav container-fluid-sm flex items-center justify-between">
-        <div class="content white max-1200:text-center">
-          <p>This is the first example of a sitewide notice.</p>
+        <div class="swiper nav-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="content white max-1200:text-center">
+                <p>This is the first example of a sitewide notice.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="content white max-1200:text-center">
+                <p>This is the first example of a sitewide notice.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="content white max-1200:text-center">
+                <p>This is the first example of a sitewide notice.</p>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Single button wrapper -->
         <div id="top-btn-wrapper">
           <a id="join-btn" href="javascript:void(0)" class="btn btn-yellow">Join Elavate</a>
         </div>
       </nav>
-
       <!-- Bottom Nav -->
       <nav id="bottom-nav" class="bottom-nav container-fluid-sm relative flex items-center justify-between bg-transparent transition-colors duration-300">
-        <div class="img min-1200:hidden cursor-pointer" id="menu-toggle">
+        <button role="button" class="img min-1200:hidden cursor-pointer" id="menu-toggle" role="button">
           <img src="../assets/images/hamburger-icon.svg" alt="Hamburger Icon" />
-        </div>
-
+        </button>
         <!-- Logo -->
-        <div class="logo">
+        <div class="brand-logo">
           <a href="javascript:void(0)">
-            <div class="img">
-              <img src="../assets/images/elevate-logo.webp" alt="Logo" width="422" height="60" />
-            </div>
+            <img src="../assets/images/elevate-logo.webp" alt="Logo" width="422" height="60" />
           </a>
         </div>
-
         <!-- Nav wrapper -->
         <div id="nav-wrapper" class="nav-wrapper mobile-menu">
           <!-- Nav List -->
@@ -55,18 +66,18 @@
         </div>
 
         <!-- Search -->
-        <div class="search" id="search-btn">
-          <div class="img">
-            <img src="../assets/images/search-icon.svg" alt="Search Icon" width="20" height="20" />
-          </div>
-        </div>
+         <a href="javscript:void(0)">
+           <button role="button" class="search" id="search-btn">
+             <img src="../assets/images/search-icon.svg" alt="Search Icon" width="20" height="20" />
+           </button>
+         </a>
 
         <!-- Search Bar -->
-        <div class="search-bar container-fluid-sm hidden py-28" id="search-bar">
+        <button role="button" class="search-bar container-fluid-sm hidden py-28" id="search-bar">
           <form action="">
             <input type="text" class="w-full px-20 py-10" placeholder="search" />
           </form>
-        </div>
+        </button>
       </nav>
     </header>
     <!-- Header End -->
@@ -82,7 +93,7 @@
             <h1>Elevate Your Craft. Fuel Your Purpose. <span>Join a Movement.</span></h1>
           </div>
           <div class="sub-title white mt-20 text-center">
-            <p>More than education—it’s daily inspiration, growth, and a stylist community that lifts you up every day behind the chair.</p>
+            <h2>More than education—it’s daily inspiration, growth, and a stylist community that lifts you up every day behind the chair.</h2>
           </div>
           <div class="max-575:flex-wrap banner-btns mt-28 flex items-center justify-center gap-28">
             <a href="javascript:void(0)" class="btn btn-b-yellow">Explore Memberships</a>
@@ -140,7 +151,7 @@
       <!-- Banner End -->
 
       <!-- Zigzag Section Start -->
-      <section class="zigzag-section">
+      <section class="zigzag-wrapper">
         <div class="container-fluid-lg">
           <div class="zigzag-inner">
             <div class="zigzag-left">
@@ -165,11 +176,8 @@
               </div>
             </div>
             <div class="zigzag-right">
-              <div class="img mobile-front">
-                <img src="../assets/images/mobile-front.webp" alt="Mobile Image" width="307" height="620" />
-              </div>
-              <div class="img mobile-back">
-                <img src="../assets/images/mobile-back.webp" alt="Mobile Image" width="307" height="596" />
+              <div class="img">
+                <img src="/assets/images/mobile-img1.webp" alt="Mobile Img">
               </div>
             </div>
           </div>
@@ -295,30 +303,8 @@
                     <div class="pricing-card-inner">
                       <div class="price-badge">
                         <div class="price-tag">
-                        <span>Online Class</span>
-                      </div>
-                      </div>
-                      <div class="title-bold text-center">
-                        <h5>Elevate Connect</h5>
-                      </div>
-                      <div class="price-content content">
-                        <p><span>$49</span> Month</p>
-                      </div>
-                      <div class="content text-center">
-                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide" data-plan="monthly">
-                <a href="javascript:void(0)">
-                  <div class="pricing-card">
-                    <div class="pricing-card-inner">
-                      <div class="price-badge">
-                        <div class="price-tag">
-                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
-                      </div>
+                          <span>Online Class</span>
+                        </div>
                       </div>
                       <div class="title-bold text-center">
                         <h5>Elevate Connect</h5>
@@ -339,8 +325,8 @@
                     <div class="pricing-card-inner">
                       <div class="price-badge">
                         <div class="price-tag">
-                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
-                      </div>
+                          <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                        </div>
                       </div>
                       <div class="title-bold text-center">
                         <h5>Elevate Connect</h5>
@@ -361,8 +347,30 @@
                     <div class="pricing-card-inner">
                       <div class="price-badge">
                         <div class="price-tag">
-                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                          <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                        </div>
                       </div>
+                      <div class="title-bold text-center">
+                        <h5>Elevate Connect</h5>
+                      </div>
+                      <div class="price-content content">
+                        <p><span>$49</span> Month</p>
+                      </div>
+                      <div class="content text-center">
+                        <p>Membership to the Elevate Your Chair App for daily inspiration, wellness, online education, and more!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide" data-plan="monthly">
+                <a href="javascript:void(0)">
+                  <div class="pricing-card">
+                    <div class="pricing-card-inner">
+                      <div class="price-badge">
+                        <div class="price-tag">
+                          <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                        </div>
                       </div>
                       <div class="title-bold text-center">
                         <h5>Elevate Connect</h5>
@@ -383,8 +391,8 @@
                     <div class="pricing-card-inner">
                       <div class="price-badge">
                         <div class="price-tag">
-                        <span>ONLINE W/ IN-PERSON EDUCATION</span>
-                      </div>
+                          <span>ONLINE W/ IN-PERSON EDUCATION</span>
+                        </div>
                       </div>
                       <div class="title-bold text-center">
                         <h5>Elevate Connect</h5>
@@ -576,13 +584,16 @@
               <div class="btn-custom">
                 <a href="javascript:void(0)" class="btn btn-b-yellow">
                   <div class="img">
-                    <img src="/assets/images/apple-icon.svg" alt="Apple Icon" width="24" height="24">
+                    <img src="/assets/images/apple-icon.svg" alt="Apple Icon" width="24" height="24" />
                   </div>
-                  app store</a>
+                  app store</a
+                >
                 <a href="javascript:void(0)" class="btn btn-b-yellow">
                   <div class="img">
-                    <img src="/assets/images/play-store-icon.svg" alt="Play Store icon" width="24" height="24">
-                  </div>google play</a>
+                    <img src="/assets/images/play-store-icon.svg" alt="Play Store icon" width="24" height="24" />
+                  </div>
+                  google play</a
+                >
               </div>
             </div>
           </div>
@@ -715,13 +726,13 @@
               </div>
               <div class="social-media-icon">
                 <a href="javascript:void(0)">
-                  <img src="/assets/images/instagram.svg" alt="instagram icon" width="24" height="24">
+                  <img src="/assets/images/instagram.svg" alt="instagram icon" width="24" height="24" />
                 </a>
                 <a href="javascript:void(0)">
-                  <img src="/assets/images/tiktok.svg" alt="tiktok icon" width="20" height="23">
+                  <img src="/assets/images/tiktok.svg" alt="tiktok icon" width="20" height="23" />
                 </a>
                 <a href="javascript:void(0)">
-                  <img src="/assets/images/youtube.svg" alt="youtube icon" width="23" height="17">
+                  <img src="/assets/images/youtube.svg" alt="youtube icon" width="23" height="17" />
                 </a>
               </div>
             </div>

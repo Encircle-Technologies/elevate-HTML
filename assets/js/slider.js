@@ -1,4 +1,22 @@
 const initSliders = () => {
+  const initNavSlider = () => {
+    const navSliderEl = document.querySelector('.nav-slider');
+    if (!navSliderEl) return;
+
+    new Swiper('.nav-slider', {
+      slidesPerView: 1,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".nav-slider-pagination",
+        clickable: true,
+      },
+    });
+  };
   const initCardSlider = () => {
     const cardSliderEl = document.querySelector('.card-slider');
     if (!cardSliderEl) return;
@@ -182,6 +200,7 @@ const initSliders = () => {
     });
   };
 
+  initNavSlider();
   initCardSlider();
   initPricingSlider();
   initTestimonialSlider();

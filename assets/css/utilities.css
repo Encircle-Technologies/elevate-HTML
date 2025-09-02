@@ -73,8 +73,8 @@
     @apply max-w-1312 mx-auto w-full;
 }
 
-.hero-banner .sub-title p {
-    @apply leading-34 max-575:leading-22 max-575:text-18;
+.hero-banner .sub-title h2 {
+    @apply leading-34 max-575:leading-22 max-575:text-18 text-white text-heading-4;
 }
 
 .banner-btns {
@@ -87,50 +87,25 @@
 /* Hero Section End */
 
 /* Zigzag Section Start */
-.zigzag-section {
+.zigzag-wrapper {
     @apply min-1024:py-80 py-55;
 }
 
-.zigzag-section h2 {
+.zigzag-wrapper h2 {
     @apply leading-58 max-768:leading-38;
 }
 
-.zigzag-section .zigzag-inner {
+.zigzag-wrapper .zigzag-inner {
     @apply flex items-center gap-80 flex-wrap-reverse min-1200:flex-nowrap max-1200:gap-50 max-1200:justify-center relative justify-between;
 }
 
-.zigzag-section .zigzag-left {
+.zigzag-wrapper .zigzag-left {
     @apply flex flex-col gap-20 border-l-2 border-gray ps-40 min-1199:max-w-750 min-1600:w-full min-575:py-20 max-575:ps-20;
 }
 
-.zigzag-section .content p {
+.zigzag-wrapper .content p {
     @apply text-slate-gray;
 }
-
-.zigzag-section .zigzag-right {
-    @apply relative;
-}
-
-.zigzag-section .mobile-front {
-    @apply absolute min-1199:-top-25 -left-[49%] z-5 w-full max-990:relative max-990:-left-[20%];
-}
-
-.zigzag-section .mobile-front img {
-    @apply min-1199:h-660 h-auto;
-}
-
-.zigzag-section .mobile-back {
-    @apply rotate-10 max-990:absolute max-990:top-10 w-full max-990:rotate-10 max-990:left-[30%] max-575:rotate-17 max-575:-top-4 max-575:left-[19%];
-}
-
-.zigzag-section .mobile-back img {
-    @apply max-575:h-305;
-}
-
-.zigzag-section img {
-    @apply max-1441:w-280 h-auto max-1365:w-200 max-575:w-150;
-}
-
 /* Zigzag Section End */
 
 /* Slider Section Start */

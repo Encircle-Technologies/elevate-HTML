@@ -8,7 +8,7 @@ header.sticky {
   @apply sticky top-0;
 }
 
-header .logo img {
+header .brand-logo img {
   @apply max-575:w-197 max-575:h-28
 }
 
@@ -16,8 +16,8 @@ header .logo img {
   @apply bg-black flex justify-between items-center py-14;
 }
 
-.top-nav .content {
-  @apply min-1200:w-7/12;
+.top-nav .nav-slider {
+  @apply min-1200:w-7/12 !m-0;
 }
 
 .bottom-nav {
