@@ -13,70 +13,78 @@
     <!-- Header Start -->
     <header>
       <!-- Top Nav -->
-      <nav class="top-nav container-fluid-sm flex items-center justify-between">
-        <div class="swiper nav-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="content white max-1200:text-center">
-                <p>This is the first example of a sitewide notice.</p>
+      <nav class="top-nav">
+        <div class="inner-wrapper flex items-center justify-between">
+          <div class="swiper nav-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="content white max-1200:text-center">
+                  <p>This is the first example of a sitewide notice.</p>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="content white max-1200:text-center">
-                <p>This is the first example of a sitewide notice.</p>
+              <div class="swiper-slide">
+                <div class="content white max-1200:text-center">
+                  <p>This is the second example of a sitewide notice.</p>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="content white max-1200:text-center">
-                <p>This is the first example of a sitewide notice.</p>
+              <div class="swiper-slide">
+                <div class="content white max-1200:text-center">
+                  <p>This is the third example of a sitewide notice.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Single button wrapper -->
-        <div id="top-btn-wrapper">
-          <a id="join-btn" href="javascript:void(0)" class="btn btn-yellow">Join Elavate</a>
+          <!-- Single button wrapper -->
+          <div id="top-btn-wrapper">
+            <a role="link" aria-label="Join Elevate" id="join-btn" href="javascript:void(0)" class="btn btn-yellow">Join Elevate</a>
+          </div>
         </div>
       </nav>
+
       <!-- Bottom Nav -->
-      <nav id="bottom-nav" class="bottom-nav container-fluid-sm relative flex items-center justify-between bg-transparent transition-colors duration-300">
-        <button role="button" class="img min-1200:hidden cursor-pointer" id="menu-toggle" role="button">
-          <img src="../assets/images/hamburger-icon.svg" alt="Hamburger Icon" />
-        </button>
-        <!-- Logo -->
-        <div class="brand-logo">
-          <a href="javascript:void(0)">
-            <img src="../assets/images/elevate-logo.webp" alt="Logo" width="422" height="60" />
-          </a>
-        </div>
-        <!-- Nav wrapper -->
-        <div id="nav-wrapper" class="nav-wrapper mobile-menu">
-          <!-- Nav List -->
-          <ul class="nav-list-ul">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Membership</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">In-salon Education</a></li>
-            <li><a href="#">Wellness</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+      <nav id="bottom-nav" class="bottom-nav relative transition-colors duration-300">
+        <div class="inner-wrapper flex items-center justify-between">
+          <!-- Hamburger -->
+          <button role="button" aria-label="burger menu" class="img min-1200:hidden menu-toggle cursor-pointer" id="menu-toggle">
+            <img src="../assets/images/hamburger-icon.svg" alt="Hamburger Icon" />
+          </button>
 
-          <!-- Mobile button wrapper (inside dropdown) -->
-          <div id="mobile-btn-wrapper" class="mobile-btn-wrapper flex justify-center pt-6"></div>
-        </div>
+          <!-- Logo -->
+          <div class="brand-logo">
+            <a href="javascript:void(0)" aria-label="elevate your chair" role="link">
+              <img src="../assets/images/elevate-logo.webp" alt="elevate your chair" width="422" height="60" />
+            </a>
+          </div>
 
-        <!-- Search -->
-         <a href="javscript:void(0)">
-           <button role="button" class="search" id="search-btn">
-             <img src="../assets/images/search-icon.svg" alt="Search Icon" width="20" height="20" />
-           </button>
-         </a>
+          <!-- Nav wrapper -->
+          <div id="nav-wrapper" class="nav-wrapper mobile-menu">
+            <!-- Nav List -->
+            <ul class="nav-list-ul" role="list">
+              <li><a href="javascript:void(0)" role="link" aria-label="about">About</a></li>
+              <li><a href="javascript:void(0)" role="link" aria-label="Membership">Membership</a></li>
+              <li><a href="javascript:void(0)" role="link" aria-label="Community">Community</a></li>
+              <li><a href="javascript:void(0)" role="link" aria-label="In-salon Education">In-salon Education</a></li>
+              <li><a href="javascript:void(0)" role="link" aria-label="Wellness">Wellness</a></li>
+              <li><a href="javascript:void(0)" role="link" aria-label="Contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile button wrapper (inside dropdown) -->
+            <div id="mobile-btn-wrapper" class="mobile-btn-wrapper flex justify-center pt-6"></div>
+          </div>
+
+          <!-- Search -->
+          <button role="button" class="search" id="search-btn" aria-label="search icon">
+            <img src="../assets/images/search-icon.svg" alt="Search Icon" width="20" height="20" />
+          </button>
+        </div>
 
         <!-- Search Bar -->
-        <button role="button" class="search-bar container-fluid-sm hidden py-28" id="search-bar">
-          <form action="">
-            <input type="text" class="w-full px-20 py-10" placeholder="search" />
-          </form>
+        <button class="search-bar hidden py-28" id="search-bar">
+          <div class="inner-wrapper">
+            <form action="">
+              <input type="text" class="w-full px-20 py-10" placeholder="search" />
+            </form>
+          </div>
         </button>
       </nav>
     </header>
@@ -84,7 +92,7 @@
 
     <main>
       <!-- Banner Start -->
-      <section class="hero-banner relative">
+      <section class="hero-banner relative banner">
         <video id="video" autoplay muted loop preload="metadata">
           <source src="../assets/images/banner-video.mp4" />
         </video>
@@ -96,11 +104,11 @@
             <h2>More than education—it’s daily inspiration, growth, and a stylist community that lifts you up every day behind the chair.</h2>
           </div>
           <div class="max-575:flex-wrap banner-btns mt-28 flex items-center justify-center gap-28">
-            <a href="javascript:void(0)" class="btn btn-b-yellow">Explore Memberships</a>
-            <a href="javascript:void(0)" class="btn btn-yellow">Donwload the App</a>
+            <a href="javascript:void(0)" class="btn btn-b-yellow" role="link" aria-label="membership">Explore Memberships</a>
+            <a href="javascript:void(0)" class="btn btn-yellow" role="link" aria-label="downlod the app">Donwload the App</a>
           </div>
         </div>
-        <!-- <div class="hero-slider swiper">
+        <div class="hero-slider swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="../assets/images/hero-slide-img1.webp" alt="Slide 1" class="h-full w-full object-cover" />
@@ -146,15 +154,15 @@
             </div>
           </div>
           <div class="swiper-pagination hero-pagination"></div>
-        </div> -->
+        </div>
       </section>
       <!-- Banner End -->
 
       <!-- Zigzag Section Start -->
-      <section class="zigzag-wrapper">
+      <section class="zigzag-wrapper right-image">
         <div class="container-fluid-lg">
           <div class="zigzag-inner">
-            <div class="zigzag-left">
+            <div class="zigzag-left zigzag-border">
               <div class="title">
                 <h2>Welcome to <span>Elevate your chair</span></h2>
               </div>
@@ -172,12 +180,12 @@
                 </p>
               </div>
               <div class="btn-custom mt-10">
-                <a href="javascript:void(0)" class="btn btn-yellow">Learn More</a>
+                <a href="javascript:void(0)" class="btn btn-yellow" role="button" aria-label="learn more">Learn More</a>
               </div>
             </div>
             <div class="zigzag-right">
               <div class="img">
-                <img src="/assets/images/mobile-img1.webp" alt="Mobile Img">
+                <img src="/assets/images/mobile-img1.webp" alt="Mobile Img" />
               </div>
             </div>
           </div>
@@ -186,7 +194,7 @@
       <!-- Zigzag Section End -->
 
       <!-- Slider Section Start -->
-      <section class="slider-section">
+      <section class="different-slider-wrapper">
         <div class="container-fluid-sm">
           <div class="title title-white text-center">
             <h2>What Makes Us <span>Different</span></h2>
@@ -292,13 +300,13 @@
             <h2>Pricing <span>Summary</span></h2>
           </div>
           <div class="title-bold price-tabs">
-            <button class="month-btn" data-plan="monthly"><span>Monthly</span></button>
-            <button data-plan="yearly"><span>Yearly</span></button>
+            <button class="month-btn" data-plan="monthly" role="button" aria-label="Monthly"><span>Monthly</span></button>
+            <button data-plan="yearly" aria-label="Yearly" role="button"><span>Yearly</span></button>
           </div>
-          <div class="pricing-slider swiper-container mt-65">
+          <div class="pricing-slider swiper-container mt-65 max-575:mt-40">
             <div class="swiper-wrapper">
               <div class="swiper-slide" data-plan="monthly">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" role="link" aria-label="Elevate Connect">
                   <div class="pricing-card">
                     <div class="pricing-card-inner">
                       <div class="price-badge">
@@ -320,7 +328,7 @@
                 </a>
               </div>
               <div class="swiper-slide" data-plan="monthly">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" role="link" aria-label="Elevate Foundations">
                   <div class="pricing-card">
                     <div class="pricing-card-inner">
                       <div class="price-badge">
@@ -342,7 +350,7 @@
                 </a>
               </div>
               <div class="swiper-slide" data-plan="monthly">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" role="link" aria-label="Elevate Momentum">
                   <div class="pricing-card">
                     <div class="pricing-card-inner">
                       <div class="price-badge">
@@ -364,7 +372,7 @@
                 </a>
               </div>
               <div class="swiper-slide" data-plan="monthly">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" role="link" aria-label="Elevate Mastery">
                   <div class="pricing-card">
                     <div class="pricing-card-inner">
                       <div class="price-badge">
@@ -386,7 +394,7 @@
                 </a>
               </div>
               <div class="swiper-slide" data-plan="yearly">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" role="link" aria-label="Elevate Connect">
                   <div class="pricing-card">
                     <div class="pricing-card-inner">
                       <div class="price-badge">
@@ -409,14 +417,14 @@
               </div>
             </div>
             <div class="btn-custom mt-55 flex justify-center">
-              <a href="javscript:void(0)" class="btn btn-black">Learn More</a>
+              <a href="javscript:void(0)" class="btn btn-black" role="button" aria-label="learn more">Learn More</a>
             </div>
             <div class="card-slider-pagination">
               <div class="img previous">
-                <img src="/assets/images/previous-arrow.svg" alt="Previous Icon" width="21" height="38" />
+                <img src="/assets/images/previous-icon.svg" alt="Previous Icon" width="21" height="38" />
               </div>
               <div class="img next">
-                <img src="/assets/images/next-arrow.svg" alt="Next Icon" width="21" height="38" />
+                <img src="/assets/images/next-icon.svg" alt="Next Icon" width="21" height="38" />
               </div>
             </div>
           </div>
@@ -553,25 +561,22 @@
       <!-- Testimonial Section End -->
 
       <!-- Journey Zigzag Section Start -->
-      <section class="journey-section">
+      <section class="zigzag-wrapper left-image journey-section">
         <div class="container-fluid-lg">
-          <div class="journey-inner">
-            <div class="journey-left">
-              <div class="img front-view">
-                <img src="/assets/images/journey-mobile-front.webp" alt="Mobile Front" width="307" height="596" />
-              </div>
-              <div class="img back-view">
-                <img src="/assets/images/mobile-back.webp" alt="Mobile Back" width="307" height="596" />
+          <div class="zigzag-inner">
+            <div class="zigzag-left">
+              <div class="img">
+                <img src="/assets/images/mobile-img2.webp" alt="Mobile Img" width="346" height="596" />
               </div>
             </div>
-            <div class="journey-right">
+            <div class="zigzag-right">
               <div class="title title-white">
                 <h2>Your Journey <span>Starts in the app</span></h2>
               </div>
               <div class="content white">
                 <p>Everything happens in our all-in-one platform:</p>
               </div>
-              <ul class="global-list">
+              <ul class="global-list" role="list">
                 <li>24/7 access to our education library</li>
                 <li>Live and in-person classes</li>
                 <li>Daily content drops and motivation</li>
@@ -582,13 +587,13 @@
                 <p>Download the app to start your membership and take your next step.</p>
               </div>
               <div class="btn-custom">
-                <a href="javascript:void(0)" class="btn btn-b-yellow">
+                <a href="javascript:void(0)" class="btn btn-b-yellow" role="button" aria-label="app store">
                   <div class="img">
                     <img src="/assets/images/apple-icon.svg" alt="Apple Icon" width="24" height="24" />
                   </div>
                   app store</a
                 >
-                <a href="javascript:void(0)" class="btn btn-b-yellow">
+                <a href="javascript:void(0)" class="btn btn-b-yellow" role="button" aria-label="play store">
                   <div class="img">
                     <img src="/assets/images/play-store-icon.svg" alt="Play Store icon" width="24" height="24" />
                   </div>
@@ -602,9 +607,10 @@
       <!-- Journey Zigzag Section End -->
 
       <!-- Stylist Section Start -->
-      <section class="stylist-section">
+      <section class="stylist-section bg-cream relative">
+        <img src="/assets/images/book-shelf-img.webp" alt="Book Shelf Image">
         <div class="container-fluid-lg">
-          <div class="stylist-inner">
+          <div class="stylist-inner white-box">
             <div class="title text-center">
               <h2>Built for Stylists <span>at Every Stage</span></h2>
             </div>
@@ -649,7 +655,7 @@
               <p>You belong here.</p>
             </div>
             <div class="btn-custom">
-              <a href="javascript:void(0)" class="btn btn-yellow">Contact Us Today</a>
+              <a href="javascript:void(0)" class="btn btn-yellow" role="button" aria-label="contact us today">Contact Us Today</a>
             </div>
           </div>
         </div>
@@ -657,14 +663,14 @@
       <!-- Stylist Section End -->
     </main>
 
-    <footer class="footer bg-black py-55">
+    <footer class="footer bg-black py-55 max-575:py-40">
       <div class="container-fluid">
         <div class="top-content">
           <div class="title-bold title-white">
             <h5>Follow Us</h5>
           </div>
           <div class="title-bold insta-handle">
-            <h5><a href="javascript:void(0)">@elevateyourchair</a></h5>
+            <h5><a href="javascript:void(0)" role="link" aria-label="elevateyourchair">@elevateyourchair</a></h5>
           </div>
         </div>
         <!-- <div class="footer-grid">
@@ -693,10 +699,10 @@
           </div>
           <div class="social-media-handle">
             <div class="img">
-              <img src="/assets/images/footer-logo.svg" alt="Footer Logo" width="422" height="60" />
+              <a href="javascript:void(0)" role="link" aria-label="footer logo"><img src="/assets/images/footer-logo.svg" alt="Footer Logo" width="422" height="60" /></a>
             </div>
             <div class="footer-pages">
-              <ul class="footer-list">
+              <ul class="footer-list" role="list">
                 <li><a href="javascript:void(0)">Blake Charles Salon</a></li>
                 <li><a href="javascript:void(0)">Privacy Policy</a></li>
                 <li><a href="javascript:void(0)">Terms & Condition</a></li>
@@ -705,10 +711,10 @@
             </div>
             <div class="copyright">
               <div class="content">
-                <p>©2025 Elevate Your Chair</p>
+                <p>©2025 <a href="javascript:void(0)" role="link" aria-label="elevate your chair">Elevate Your Chair</a></p>
               </div>
               <div class="website-link">
-                <a href="https://techyscouts.com/" class="techyscouts-credit-link" aria-label="techyscouts-logo">
+                <a href="https://techyscouts.com/" class="techyscouts-credit-link" aria-label="techyscouts-logo" role="link">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 0 3700 552" id="techyscouts-logo" aria-labelledby="techyscouts-logo-title" role="img">
                     <path
                       id="techyscouts-logo-heart"
@@ -725,13 +731,13 @@
                 </a>
               </div>
               <div class="social-media-icon">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" role="link" aria-label="instagram icon">
                   <img src="/assets/images/instagram.svg" alt="instagram icon" width="24" height="24" />
                 </a>
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" aria-label="tiktok icon" role="link">
                   <img src="/assets/images/tiktok.svg" alt="tiktok icon" width="20" height="23" />
                 </a>
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" aria-label="youtube icon" role="link">
                   <img src="/assets/images/youtube.svg" alt="youtube icon" width="23" height="17" />
                 </a>
               </div>

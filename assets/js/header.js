@@ -9,11 +9,21 @@ function initScrollNav() {
   const topBtnWrapper = document.getElementById("top-btn-wrapper");
   const mobileBtnWrapper = document.getElementById("mobile-btn-wrapper");
 
-  // --- Fixed threshold for sticky header ---
-  const threshold = 820;
+  // --- Dynamic threshold based on banner height ---
+  function getThreshold() {
+    const banner = document.querySelector(".banner");
+
+    if (banner) {
+      const bannerTop = banner.offsetTop;
+      const bannerHeight = banner.offsetHeight;
+      return bannerTop + bannerHeight;
+    }
+  }
 
   // --- Scroll effect: sticky header + bottom nav color ---
-  window.addEventListener("scroll", () => {
+  function handleScroll() {
+    const threshold = getThreshold();
+
     if (window.scrollY >= threshold) {
       bottomNav?.classList.add("scrolled");
       headerEl?.classList.add("sticky");
@@ -21,6 +31,13 @@ function initScrollNav() {
       bottomNav?.classList.remove("scrolled");
       headerEl?.classList.remove("sticky");
     }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+
+  // Recalculate threshold on window resize (in case banner height changes)
+  window.addEventListener("resize", () => {
+    handleScroll(); // Immediately check with new threshold
   });
 
   // --- Search toggle ---
@@ -54,6 +71,7 @@ function initScrollNav() {
   if (menuToggle && navWrapper) {
     menuToggle.addEventListener("click", () => {
       navWrapper.classList.toggle("active");
+      menuToggle.classList.toggle("active");
     });
   }
 

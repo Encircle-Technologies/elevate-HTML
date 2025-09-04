@@ -1,13 +1,13 @@
 .container-fluid {
-    @apply w-full px-80 max-1440:px-40 max-767:px-30;
+    @apply w-full px-80 max-1440:px-40 max-767:px-24 min-1600:max-w-screen-2xl min-1600:mx-auto min-1600:px-0;
 }
 
 .container-fluid-sm {
-    @apply w-full px-55 max-1440:px-30 max-767:px-30;
+    @apply w-full px-55 max-1440:px-30 max-767:px-24 min-1600:max-w-screen-2xl min-1600:mx-auto min-1600:px-0;
 }
 
 .container-fluid-lg {
-    @apply w-full px-100 max-1440:px-60 max-767:px-30;
+    @apply w-full px-100 max-1440:px-60 max-767:px-24 min-1600:max-w-screen-2xl min-1600:mx-auto min-1600:px-0;
 }
 
 .title-bold h1,
@@ -52,6 +52,10 @@
 
 .sub-title.white p {
     @apply text-white;
+}
+
+.inline-title span {
+    @apply inline;
 }
 
 .global-list ul {
@@ -136,4 +140,32 @@
 .color-white h5,
 .color-white h6 {
     @apply text-white;
+}
+
+.bg-cream {
+    @apply relative;
+}
+
+.bg-cream .container-fluid-lg {
+    z-index: 5;
+    position: relative;
+}
+
+.bg-cream::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    z-index: 1;
+    background-color: rgba(214, 207, 201, 0.8);
+}
+
+.bg-cream img {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.white-box {
+    @apply max-w-1000 mx-auto p-28 relative z-5 max-575:p-20;
+}
+
+.white-box::before{
+    @apply content-[""] absolute top-0 left-0 w-full h-full;
+    background: rgba(255, 255, 255, 0.88);
 }

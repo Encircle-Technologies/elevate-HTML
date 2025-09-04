@@ -54,7 +54,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    @apply text-heading-2 leading-48 max-1440:text-heading-2-tablet max-1023:text-heading-1-mobile max-1023:leading-32;
+    @apply text-heading-2 leading-58 max-1440:text-heading-2-tablet max-1023:text-heading-1-mobile max-1023:leading-38;
 }
 
 h3, .h3 {
@@ -98,6 +98,14 @@ h6, .h6 {
     @apply text-white;
 }
 
+.content.gray p {
+    @apply text-slate-gray;
+}
+
 .content.black p {
     @apply text-black;
+}
+
+.content span {
+    @apply font-extrabold;
 }

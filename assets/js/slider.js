@@ -17,6 +17,25 @@ const initSliders = () => {
       },
     });
   };
+  const initHeroSlider = () => {
+    const heroSliderEl = document.querySelector('.hero-slider');
+    if (!heroSliderEl) return;
+
+    new Swiper('.hero-slider', {
+      loop: true,
+      speed: 800,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      effect: 'fade',
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }
+    });
+  };
+
   const initCardSlider = () => {
     const cardSliderEl = document.querySelector('.card-slider');
     if (!cardSliderEl) return;
@@ -112,7 +131,7 @@ const initSliders = () => {
         375: {
           slidesPerView: 1,
           centeredSlides: true,
-          spaceBetween: 16,
+          spaceBetween: 30,
           loop: true,
           allowTouchMove: true,
         },
@@ -181,30 +200,119 @@ const initSliders = () => {
     });
   };
 
-  const initHeroSlider = () => {
-    const heroSliderEl = document.querySelector('.hero-slider');
-    if (!heroSliderEl) return;
+  const initiDifferentSlider = () => {
+    const cardSliderEl = document.querySelector('.different-card-slider');
+    if (!cardSliderEl) return;
 
-    new Swiper('.hero-slider', {
+    new Swiper('.different-card-slider', {
+      spaceBetween: 20,
+      speed: 500,
       loop: true,
-      speed: 800,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
-      effect: 'fade',
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      centeredSlides: true,
+      allowTouchMove: true,
+      slidesPerView: 1.2,
+
+      autoplay: {
+        delay: 2500,
+      },
+      navigation: {
+        nextEl: ".card-slider-pagination .next",
+        prevEl: ".card-slider-pagination .previous",
+      },
+      breakpoints: {
+        375: {
+          slidesPerView: 1.5,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 28,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 28,
+          centeredSlides: false,
+          autoplay: false,
+          allowTouchMove: false,
+        }
+      }
+    });
+  }
+
+  const initValueSlider = () => {
+    const cardSliderEl = document.querySelector('.value-card-slider');
+    if (!cardSliderEl) return;
+
+    new Swiper('.value-card-slider', {
+      spaceBetween: 20,
+      speed: 500,
+      navigation: {
+        nextEl: ".card-slider-pagination .next",
+        prevEl: ".card-slider-pagination .previous",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          centeredSlides: true,
+          spaceBetween: 12,
+          loop: true,
+          allowTouchMove: true,
+          autoplay: {
+            delay: 2500,
+          },
+        },
+        375: {
+          slidesPerView: 1.3,
+          centeredSlides: true,
+          spaceBetween: 16,
+          loop: true,
+          allowTouchMove: true,
+          autoplay: {
+            delay: 2500,
+          },
+        },
+        640: {
+          slidesPerView: 2.8,
+          centeredSlides: true,
+          spaceBetween: 20,
+          loop: true,
+          allowTouchMove: true,
+          autoplay: {
+            delay: 2500,
+          },
+        },
+        768: {
+          slidesPerView: 2,
+          centeredSlides: true,
+          spaceBetween: 24,
+          loop: true,
+          allowTouchMove: true,
+          autoplay: {
+            delay: 2500,
+          },
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 28,
+          centeredSlides: false,
+          loop: false,
+          autoplay: false,
+        }
       }
     });
   };
 
   initNavSlider();
+  initHeroSlider();
   initCardSlider();
   initPricingSlider();
   initTestimonialSlider();
-  initHeroSlider();
+  initiDifferentSlider();
+  initValueSlider();
 };
 
 export default initSliders;
