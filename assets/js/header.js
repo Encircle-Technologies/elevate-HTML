@@ -9,20 +9,9 @@ function initScrollNav() {
   const topBtnWrapper = document.getElementById("top-btn-wrapper");
   const mobileBtnWrapper = document.getElementById("mobile-btn-wrapper");
 
-  // --- Dynamic threshold based on banner height ---
-  function getThreshold() {
-    const banner = document.querySelector(".banner");
-
-    if (banner) {
-      const bannerTop = banner.offsetTop;
-      const bannerHeight = banner.offsetHeight;
-      return bannerTop + bannerHeight;
-    }
-  }
-
   // --- Scroll effect: sticky header + bottom nav color ---
   function handleScroll() {
-    const threshold = getThreshold();
+    const threshold = 100;
 
     if (window.scrollY >= threshold) {
       bottomNav?.classList.add("scrolled");
@@ -34,11 +23,7 @@ function initScrollNav() {
   }
 
   window.addEventListener("scroll", handleScroll);
-
-  // Recalculate threshold on window resize (in case banner height changes)
-  window.addEventListener("resize", () => {
-    handleScroll(); // Immediately check with new threshold
-  });
+  window.addEventListener("resize", () => handleScroll());
 
   // --- Search toggle ---
   if (searchBtn && searchBar) {
@@ -69,9 +54,22 @@ function initScrollNav() {
 
   // --- Hamburger toggle ---
   if (menuToggle && navWrapper) {
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       navWrapper.classList.toggle("active");
       menuToggle.classList.toggle("active");
+    });
+
+    // ✅ Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        navWrapper.classList.contains("active") &&
+        !navWrapper.contains(e.target) &&
+        !menuToggle.contains(e.target)
+      ) {
+        navWrapper.classList.remove("active");
+        menuToggle.classList.remove("active");
+      }
     });
   }
 
@@ -80,12 +78,10 @@ function initScrollNav() {
     if (!joinBtn || !topBtnWrapper || !mobileBtnWrapper) return;
 
     if (window.innerWidth < 1200) {
-      // Move button inside mobile wrapper (hamburger menu)
       if (!mobileBtnWrapper.contains(joinBtn)) {
         mobileBtnWrapper.appendChild(joinBtn);
       }
     } else {
-      // Move button back to top nav
       if (!topBtnWrapper.contains(joinBtn)) {
         topBtnWrapper.appendChild(joinBtn);
       }
@@ -94,12 +90,14 @@ function initScrollNav() {
 
   // Run on load
   moveJoinButton();
+  handleScroll();
 
-  // Run on resize
+  // Run on resize + DOM ready
   window.addEventListener("resize", moveJoinButton);
-
-  // Optional: run on DOMContentLoaded to ensure proper initial placement
-  window.addEventListener("DOMContentLoaded", moveJoinButton);
+  window.addEventListener("DOMContentLoaded", () => {
+    moveJoinButton();
+    handleScroll();
+  });
 }
 
 export default initScrollNav;

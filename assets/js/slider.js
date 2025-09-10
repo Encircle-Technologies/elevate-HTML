@@ -25,7 +25,7 @@ const initSliders = () => {
       loop: true,
       speed: 800,
       // autoplay: {
-      //   delay: 5000,
+      //   delay: 2500,
       //   disableOnInteraction: false,
       // },
       effect: 'fade',
@@ -116,43 +116,31 @@ const initSliders = () => {
     new Swiper('.pricing-slider', {
       spaceBetween: 20,
       speed: 500,
+      centeredSlides: true,
+      allowTouchMove: true,
+      loop: true,
+      slidesPerView: 1.2,
+
       navigation: {
         nextEl: ".card-slider-pagination .next",
         prevEl: ".card-slider-pagination .previous",
       },
       breakpoints: {
-        320: {
-          slidesPerView: 1,
-          centeredSlides: true,
-          spaceBetween: 12,
-          loop: true,
-          allowTouchMove: true,
-        },
-        375: {
-          slidesPerView: 1,
-          centeredSlides: true,
-          spaceBetween: 30,
-          loop: true,
-          allowTouchMove: true,
-        },
         640: {
           slidesPerView: 2,
-          centeredSlides: true,
           spaceBetween: 20,
-          loop: true,
-          allowTouchMove: true,
         },
         768: {
-          slidesPerView: 3,
-          centeredSlides: true,
-          spaceBetween: 24,
-          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 30,
+          centeredSlides: false,
         },
         1024: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           centeredSlides: false,
           spaceBetween: 28,
           loop: false,
+          allowTouchMove: false,
         },
       }
     });
@@ -250,50 +238,29 @@ const initSliders = () => {
     new Swiper('.value-card-slider', {
       spaceBetween: 20,
       speed: 500,
+      loop: true,
+      allowTouchMove: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+      },
       navigation: {
         nextEl: ".card-slider-pagination .next",
         prevEl: ".card-slider-pagination .previous",
       },
       breakpoints: {
-        320: {
-          slidesPerView: 1.2,
-          centeredSlides: true,
-          spaceBetween: 12,
-          loop: true,
-          allowTouchMove: true,
-          autoplay: {
-            delay: 2500,
-          },
-        },
         375: {
           slidesPerView: 1.3,
-          centeredSlides: true,
           spaceBetween: 16,
-          loop: true,
-          allowTouchMove: true,
-          autoplay: {
-            delay: 2500,
-          },
         },
         640: {
           slidesPerView: 2.8,
-          centeredSlides: true,
           spaceBetween: 20,
-          loop: true,
-          allowTouchMove: true,
-          autoplay: {
-            delay: 2500,
-          },
         },
         768: {
           slidesPerView: 2,
-          centeredSlides: true,
+          centeredSlides: false,
           spaceBetween: 24,
-          loop: true,
-          allowTouchMove: true,
-          autoplay: {
-            delay: 2500,
-          },
         },
         1200: {
           slidesPerView: 3,

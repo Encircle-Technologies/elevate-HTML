@@ -1,13 +1,13 @@
 .container-fluid {
-    @apply w-full px-80 max-1440:px-40 max-767:px-24 min-1600:max-w-screen-2xl min-1600:mx-auto min-1600:px-0;
+    @apply w-full px-80 max-1440:px-40 max-767:px-24 min-1600:max-w-1402 min-1600:mx-auto min-1600:px-0;
 }
 
 .container-fluid-sm {
-    @apply w-full px-55 max-1440:px-30 max-767:px-24 min-1600:max-w-screen-2xl min-1600:mx-auto min-1600:px-0;
+    @apply w-full px-55 max-1440:px-30 max-767:px-24 min-1600:max-w-1402 min-1600:mx-auto min-1600:px-0;
 }
 
 .container-fluid-lg {
-    @apply w-full px-100 max-1440:px-60 max-767:px-24 min-1600:max-w-screen-2xl min-1600:mx-auto min-1600:px-0;
+    @apply w-full px-100 max-1440:px-60 max-767:px-24 min-1600:max-w-1402 min-1600:mx-auto min-1600:px-0;
 }
 
 .title-bold h1,
@@ -76,11 +76,11 @@
 }
 
 .btn {
-    @apply inline-flex cursor-pointer items-center justify-center border-0 font-bold font-body text-body-2 leading-16 transition-all duration-300 ease-in-out;
+    @apply inline-flex cursor-pointer items-center justify-center text-center border-0 font-bold font-body text-body-2 leading-16 relative overflow-hidden z-1 duration-300 delay-150 ease-linear;
 }
 
 .btn-yellow {
-  @apply hover:text-white inline-flex items-center leading-20 justify-center text-center px-25 py-10 uppercase font-extrabold bg-yellow border-0 not-italic text-black relative z-1 overflow-hidden transition-colors duration-300 ease-in-out;
+  @apply hover:text-white leading-20 px-25 py-10 uppercase font-extrabold bg-yellow border-0 not-italic text-black;
 }
 
 .btn-yellow:hover {
@@ -89,7 +89,7 @@
 
 .btn-yellow::before {
   content: '';
-  @apply absolute top-0 right-0 w-0 h-full bg-slate-gray -z-1 transition-all duration-300 delay-150 ease-linear;
+  @apply absolute top-0 right-0 -z-1 w-0 h-full bg-slate-gray duration-300 delay-150 ease-linear;
 }
 
 .btn-yellow:hover::before {
@@ -97,16 +97,16 @@
 }
 
 .btn-b-yellow {
-  @apply inline-flex justify-center border-2 border-yellow leading-16 px-25 py-10 items-center text-center uppercase bg-transparent font-extrabold not-italic text-yellow relative z-1 overflow-hidden;
+  @apply border-2 border-yellow leading-16 px-25 py-10 uppercase bg-transparent font-extrabold not-italic text-yellow;
 }
 
 .btn-b-yellow::before {
   content: '';
-  @apply absolute top-0 right-0 w-0 h-full bg-yellow -z-1 transition-all duration-300 delay-150 ease-linear;
+  @apply absolute top-1/2 right-0 -z-1 w-0 h-[150%] bg-yellow -translate-y-1/2 duration-300 delay-150 ease-linear;
 }
 
 .btn-b-yellow:hover::before {
-  @apply w-full left-0;
+  @apply w-[150%] left-0;
 }
 
 .btn-b-yellow:hover {
@@ -114,7 +114,7 @@
 }
 
 .btn-black {
-    @apply inline-flex justify-center leading-16 px-25 py-10 items-center text-center uppercase bg-black text-yellow relative z-1 overflow-hidden;
+    @apply leading-16 px-25 py-10 uppercase bg-black text-yellow z-1 font-extrabold;
 }
 
 .btn-black:hover {
@@ -123,7 +123,7 @@
 
 .btn-black::before {
     content: "";
-    @apply absolute top-0 right-0 w-0 h-full bg-white -z-1 transition-all duration-300 delay-150 ease-linear;
+    @apply absolute top-0 right-0 w-0 h-full bg-white duration-300 delay-150 ease-linear -z-1;
 }
 
 .btn-black:hover::before {
@@ -146,7 +146,7 @@
     @apply relative;
 }
 
-.bg-cream .container-fluid-lg {
+.bg-cream .container-fluid-lg, .bg-cream .container-fluid-sm, .bg-cream .container-fluid {
     z-index: 5;
     position: relative;
 }
@@ -168,4 +168,35 @@
 .white-box::before{
     @apply content-[""] absolute top-0 left-0 w-full h-full;
     background: rgba(255, 255, 255, 0.88);
+}
+
+.white-gradient>* {
+    @apply relative;
+}
+
+.white-gradient .container-fluid, .white-gradient .container-fluid-sm,.white-gradient .container-fluid-lg {
+    @apply relative z-2;
+}
+
+.white-gradient::before{
+    @apply content-[''] absolute top-0 left-0 w-full h-full z-1;
+    background: linear-gradient(360deg, rgba(214, 207, 201, 0.88) 10.33%, rgba(214, 207, 201, 0) 28.92%, rgba(214, 207, 201, 0) 64.02%, rgba(214, 207, 201, 0.88) 75.64%);
+}
+
+.white-gradient img:first-child {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.black-gradient {
+    @apply relative;
+}
+
+.black-gradient::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full max-575:!bg-[linear-gradient(180deg,rgba(0,0,0,0)_30.95%,#000000_41.4%),radial-gradient(60.4%_24.89%_at_20.08%_6.44%,#F4EEE3_0%,#C2B7A3_55%,#000000_110.16%)] bg-center bg-cover bg-no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.68%, rgba(0, 0, 0, 0.4) 91.4%), radial-gradient(
+    45% 90% at 15% 30%,
+    #F4EEE3 0%, 
+    #C2B7A3 30.65%, 
+    #000000 100%
+    );
 }

@@ -1,6 +1,6 @@
 /* Hero Section Start */
 .hero-banner {
-    @apply relative min-1024:h-880 h-screen;
+    @apply relative min-1024:h-880 h-screen flex flex-col items-center justify-center;
 }
 
 .hero-banner::before {
@@ -10,20 +10,20 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(69.68% 48.01% at 50% 51.99%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.hero-banner .container-fluid-lg {
-    @apply absolute top-1/2 -translate-y-1/2 z-5;
-}
-
 .hero-banner video {
-    @apply hidden min-1024:max-h-880 h-full w-full object-cover object-top;
+    @apply block size-full object-cover object-top absolute inset-0;
 }
 
 .hero-banner .video-title {
-    @apply hidden;
+    @apply block relative z-1;
 }
 
 .hero-banner .hero-slider {
-    @apply block min-1024:max-h-880 h-full w-full object-cover relative;
+    @apply hidden min-1024:max-h-880 size-full object-cover relative;
+}
+
+.hero-banner .hero-slider .container-fluid-lg {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full z-1;
 }
 
 .hero-banner .hero-slider .swiper-slide {
@@ -42,7 +42,7 @@
 }
 
 .hero-banner.show-slider .hero-video {
-    @apply hidden;
+    @apply block;
 }
 
 .hero-banner.show-slider .hero-slider {
@@ -96,7 +96,7 @@
 }
 
 .inner-banner .container-fluid-lg {
-    @apply flex justify-center items-center h-full z-10;
+    @apply flex justify-center items-center h-full z-5;
 }
 /* Hero Section End */
 
@@ -111,11 +111,15 @@
 }
 
 .zigzag-wrapper .zigzag-inner {
-    @apply flex items-center gap-100 flex-wrap-reverse min-1200:flex-nowrap max-1200:justify-center max-1200:gap-50 relative justify-between max-575:gap-20;
+    @apply flex items-center gap-100 max-1024:flex-col max-1200:justify-center max-1200:gap-50 relative min-1600:justify-between max-575:gap-25;
 }
 
-.zigzag-wrapper.left-image .zigzag-inner {
-    @apply flex-wrap justify-between max-1200:justify-center;
+.zigzag-wrapper.right-image .zigzag-inner {
+    @apply max-1024:flex-col-reverse;
+} 
+
+.zigzag-wrapper .zigzag-inner img {
+    @apply min-1024:w-400 max-575:max-w-200 max-1024:max-w-300 min-1600:w-420;
 }
 
 .zigzag-wrapper .zigzag-border {
@@ -123,34 +127,26 @@
 }
 
 .zigzag-wrapper.right-image .zigzag-left {
-    @apply flex flex-col gap-20 min-1199:max-w-740 min-1600:w-full;
+    @apply flex flex-col gap-20 min-1024:max-w-640 min-1200:max-w-740 min-1600:w-full;
 }
 
-.zigzag-wrapper.left-image .zigzag-right {
-    @apply min-1199:max-w-740 min-1600:w-full;
-}
-
-.zigzag-wrapper.left-image .zigzag-left img {
-    @apply w-350 h-550 max-575:w-auto max-575:h-auto;
+.zigzag-wrapper .zigzag-right {
+    @apply min-1024:max-w-640 min-1200:max-w-740 min-1600:w-auto;
 }
 
 .zigzag-wrapper.right-image .content p {
     @apply text-slate-gray;
 }
 
-.zigzag-wrapper.right-image .content span {
+.zigzag-wrapper.right-image .content strong {
     @apply font-extrabold text-body-2;
-}
-
-.zigzag-wrapper.right-image .zigzag-right img {
-    @apply max-575:max-w-250 max-w-450;
 }
 
 .zigzag-wrapper.right-image .zigzag-left img {
     @apply w-auto h-546 max-1199:w-full max-768:w-440 max-575:w-250;
 }
 
-.zigzag-wrapper.left-image .zigzag-right {
+.zigzag-wrapper .zigzag-right {
     @apply flex flex-col gap-20 relative;
 }
 
@@ -169,10 +165,6 @@
 
 .zigzag-wrapper .btn-custom {
     @apply flex items-center gap-10 mt-10 flex-wrap;
-}
-
-.zigzag-wrapper .btn-custom a {
-    @apply flex items-center gap-10 mt-10 max-575:min-w-199 max-575:justify-start;
 }
 
 .zigzag-wrapper .btn-custom a img {
@@ -241,16 +233,7 @@
 
 /* Pricing Section Start */
 .pricing-section {
-    @apply py-80 bg-no-repeat bg-center bg-cover relative block w-full bg-[url('../assets/images/pricing-bg-img.webp')] overflow-hidden;
-}
-
-.pricing-section::before {
-    @apply content-[""] absolute top-0 left-0 h-full w-full;
-    background-image: linear-gradient(360deg, rgba(214, 207, 201, 0.88) 10.33%, rgba(214, 207, 201, 0) 28.92%, rgba(214, 207, 201, 0) 64.02%, rgba(214, 207, 201, 0.88) 75.64%);
-}
-
-.pricing-section >* {
-    @apply relative;
+    @apply py-80 bg-no-repeat relative overflow-hidden;
 }
 
 .pricing-section .price-tabs {
@@ -273,24 +256,44 @@
     @apply inline;
 }
 
+.pricing-section .pricing-slider {
+    @apply pt-65 max-575:pt-40 pb-10 px-10 max-575:px-0 max-575:overflow-visible;
+}
+
+.pricing-section .pricing-slider img {
+    @apply relative;
+}
+
 .pricing-section .swiper-slide {
     @apply h-auto
 }
 
+.pricing-section .content {
+    @apply mt-28 max-575:mt-20 max-w-1000 mx-auto;
+}
+
 .pricing-section .pricing-card {
-    @apply h-full relative transition-all duration-500 ease-out;
+  @apply h-full relative transition-all duration-500 ease-out border-4 border-[rgba(255,255,255,0.88)];
 }
 
 .pricing-section .pricing-card:hover {
-    @apply scale-105 -translate-y-3;
+  @apply scale-105 -translate-y-3 border-transparent;
 }
 
 .pricing-section .pricing-card-inner {
-    @apply flex flex-col p-28 h-full items-center justify-center bg-white border-4 border-transparent pt-10;
+  @apply flex flex-col p-28 h-full items-center justify-center bg-white border-4 border-transparent pt-10;
 }
 
 .pricing-section .pricing-card:hover .pricing-card-inner {
-    @apply border-black;
+  @apply border-black;
+}
+
+.pricing-section .swiper-slide:first-child .pricing-card {
+  @apply scale-105 -translate-y-3 border-transparent;
+}
+
+.pricing-section .swiper-slide:first-child .pricing-card .pricing-card-inner {
+  @apply border-black;
 }
 
 .pricing-section .price-badge {
@@ -307,11 +310,11 @@
 }
 
 .pricing-card-inner .price-content {
-    @apply mt-10 mb-28;
+    @apply mt-12 mb-28;
 }
 
 .pricing-card-inner .price-content span {
-    @apply border-r-2 pe-8 border-[rgba(26,26,26,0.8)];
+    @apply border-r-2 pe-8 border-[rgba(26,26,26,0.8)] font-normal;
 }
 
 .pricing-card-inner .price-content del {
@@ -392,7 +395,7 @@
 }
 
 .journey-section::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-full max-575:!bg-[linear-gradient(180deg,rgba(0,0,0,0)_30.95%,#000000_41.4%),radial-gradient(60.4%_24.89%_at_20.08%_6.44%,#F4EEE3_0%,#C2B7A3_55%,#000000_91.16%)] bg-center bg-cover bg-no-repeat;
+    @apply content-[''] absolute top-0 left-0 w-full h-full max-575:!bg-[linear-gradient(180deg,rgba(0,0,0,0)_30.95%,#000000_41.4%),radial-gradient(60.4%_24.89%_at_20.08%_6.44%,#F4EEE3_0%,#C2B7A3_55%,#000000_110.16%)] bg-center bg-cover bg-no-repeat;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.68%, rgba(0, 0, 0, 0.4) 91.4%), radial-gradient(
     45% 90% at 15% 30%,
     #F4EEE3 0%, 
@@ -400,6 +403,28 @@
     #000000 100%
     );
 }
+
+.journey-section .zigzag-inner {
+    @apply min-1512:justify-center
+}
+
+.journey-section .zigzag-inner img {
+    @apply min-1200:w-500;
+}
+
+.journey-section .btn-custom a {
+    @apply flex items-center gap-10 mt-10 max-575:min-w-199 max-575:justify-start;
+}
+
+.journey-section .btn-custom a img {
+  @apply transition-all duration-300 ease-linear;
+  transition-property: filter, transform;
+}
+
+.journey-section .btn-custom a:hover img {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(462%) hue-rotate(228deg) brightness(120%) contrast(100%);
+}
+
 /* Journey Section End */
 
 /* Stylist Section Start */
@@ -428,17 +453,13 @@
 }
 
 .stylist-grid .content p {
-    @apply font-extrabold mt-10 min-575:max-w-180 mx-auto;
+    @apply font-extrabold mt-10 min-575:max-w-190 mx-auto;
 }
 
 .stylist-section .btn-custom {
     @apply mt-38 text-center max-479:mt-30;
 }
 /* Stylist Section End */
-
-/* Mission Section Start */
-
-/* Mission Section End */
 
 /* Different Slider Start */
 .different-slider {
@@ -466,7 +487,7 @@
 }
 
 .different-card .img img {
-    @apply absolute top-0 left-0 w-full h-full;
+    @apply absolute top-0 left-0 w-full h-full object-cover;
 }
 
 .different-card .card-info {
@@ -483,6 +504,29 @@
     @apply mt-28 max-575:mt-20;
 }
 /* Brand Section End */
+
+/* Mission Section Start */
+.mission-section {
+    @apply py-30;
+}
+
+.mission-section .zigzag-inner img {
+    @apply !w-320;
+}
+/* Mission Section End */
+
+/* Elevate Section Start */
+.elevate-section {
+    @apply py-43;
+}
+.elevate-section img {
+    @apply !w-304 h-456;
+}
+
+.elevate-section .zigzag-inner {
+    @apply justify-between;
+}
+/* Elevate Section End */
 
 /* Our Values Section Start */
 .value-section {
@@ -519,6 +563,66 @@
 }
 /* Our Values Section End */
 
+/* Include Section Start */
+.include-section {
+    @apply py-80 bg-black;
+}
+/* Include Section End */
+
+/* Faq Section Start */
+.faq-section {
+    @apply py-80 relative z-2;
+}
+
+.faq-section .accordion-wrapper {
+    @apply max-w-1000 mx-auto flex flex-col gap-14 pt-55;
+}
+
+.accordion-item {
+  @apply overflow-hidden;
+}
+
+.accordion-header {
+  @apply flex items-center justify-between w-full bg-black transition-colors duration-300 text-left cursor-pointer py-20 px-28 max-639:px-15;
+}
+
+.accordion-header h3 {
+  @apply text-white font-bold font-heading max-639:text-body-1 max-639:leading-24;
+}
+
+.accordion-header img {
+  @apply w-20 h-20 shrink-0 transition-transform duration-300 relative;
+}
+
+.accordion-item.active .accordion-header img {
+  @apply rotate-180;
+}
+
+.accordion-body {
+  @apply bg-white border-2 border-black duration-300 ease-in-out overflow-hidden max-h-0;
+}
+
+.accordion-content {
+  @apply py-20 px-28;
+}
+
+.accordion-content p {
+  @apply text-body-2 text-gray leading-20 mb-5;
+}
+
+.accordion-content ul {
+    @apply flex flex-col gap-10;
+}
+
+.accordion-content .global-list li {
+    @apply text-gray relative ps-20;
+}
+
+.accordion-content ul li::before {
+    content: "";
+    @apply absolute top-8 left-0 w-8 h-8 bg-yellow rounded-full;
+}
+/* Faq Section End */
 
 /* Common Card Start */
 .gradient-card {
@@ -528,5 +632,9 @@
 .gradient-card::before {
     @apply content-[''] absolute top-0 left-0 h-full w-full;
     background: linear-gradient(359.91deg, rgba(26, 26, 26, 0.88) 23.44%, rgba(26, 26, 26, 0.704) 49.04%, rgba(26, 26, 26, 0.5896) 60.42%, rgba(26, 26, 26, 0) 80.33%), rgba(94, 94, 94, 0.2);
+}
+
+.gradient-card h6 {
+    @apply leading-24;
 }
 /* Common Card End */

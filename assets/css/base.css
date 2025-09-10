@@ -25,12 +25,16 @@ select {
   box-shadow: none;
 }
 
-button {
-  @apply bg-transparent border-0;
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    @apply outline-dotted outline-1 outline-yellow;
 }
 
-a:hover {
-  @apply transition-all duration-300;
+button {
+  @apply bg-transparent border-0;
 }
 
 ul {
@@ -66,11 +70,11 @@ h4, .h4 {
 }
 
 h5, .h5 {
-    @apply text-heading-5 leading-24;
+    @apply text-heading-5 leading-29;
 }
 
 h6, .h6 {
-    @apply text-heading-6 leading-20;
+    @apply text-heading-6 leading-24;
 }
 
 .content {
@@ -106,6 +110,6 @@ h6, .h6 {
     @apply text-black;
 }
 
-.content span {
+.content strong {
     @apply font-extrabold;
 }
