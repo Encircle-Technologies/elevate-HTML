@@ -113,7 +113,7 @@ footer .top-content {
 
 
 footer .top-content h5 {
-  @apply text-body-2;
+  @apply max-575:text-body-2;
 }
 
 footer .insta-handle h5 {

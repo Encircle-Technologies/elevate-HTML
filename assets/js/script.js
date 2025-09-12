@@ -6,7 +6,7 @@ import initPricingTabs from "./tab.js";
 
 document.addEventListener('DOMContentLoaded', function() {
     initScrollNav();
-    initSliders();
+    initSliders();    
     initPricingTabs();
     initAccordion();
 })

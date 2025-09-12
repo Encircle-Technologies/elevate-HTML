@@ -1,13 +1,30 @@
+import { initPricingSlider } from './slider.js';
+
 const initPricingTabs = () => {
   const tabs = document.querySelectorAll('.price-tabs button');
-  const slides = document.querySelectorAll('.pricing-slider .swiper-slide');
+  const wrapper = document.querySelector('.pricing-slider .swiper-wrapper');
+  const allSlides = document.querySelectorAll('.pricing-slider .swiper-slide');
 
-  if (tabs.length === 0) return;
+  if (tabs.length === 0 || !wrapper) return;
 
   const showSlidesForPlan = (selectedPlan) => {
-    slides.forEach((slide) => {
-      slide.style.display = slide.dataset.plan === selectedPlan ? 'block' : 'none';
+    // Destroy old swiper instance first
+    if (wrapper.closest('.pricing-slider').swiper) {
+      wrapper.closest('.pricing-slider').swiper.destroy(true, true);
+    }
+
+    // Clear wrapper
+    wrapper.innerHTML = "";
+
+    // Append only slides matching the selected plan
+    allSlides.forEach((slide) => {
+      if (slide.dataset.plan === selectedPlan) {
+        wrapper.appendChild(slide);
+      }
     });
+
+    // Re-init Swiper
+    initPricingSlider();
   };
 
   // Default active = monthly
@@ -15,7 +32,7 @@ const initPricingTabs = () => {
   if (monthlyTab) monthlyTab.classList.add('active');
   showSlidesForPlan('monthly');
 
-  // Add click listeners
+  // Tab click handling
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       tabs.forEach((t) => t.classList.remove('active'));
