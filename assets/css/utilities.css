@@ -86,11 +86,11 @@
 }
 
 .inner-banner {
-    @apply relative h-400;
+    @apply relative h-468;
 }
 
 .inner-banner .title-bold {
-    @apply mt-[5%];
+    @apply mt-[5%] text-center;
 }
 
 .inner-banner::before {
@@ -239,7 +239,7 @@
 }
 
 .card-slider-pagination img {
-    @apply w-40 h-40 cursor-pointer;
+    @apply w-40 h-40 cursor-pointer !static;
 }
 /* Slider Section End */
 
@@ -253,7 +253,7 @@
 }
 
 .price-tabs button span {
-  @apply cursor-pointer border-b-2 border-transparent transition-all duration-300 relative font-heading font-bold text-body-1 text-black opacity-50 uppercase;
+  @apply cursor-pointer border-b-2 border-transparent transition-all duration-300 relative font-heading font-bold text-body-1 max-575:text-body-2 text-black opacity-50 uppercase;
 }
 
 .price-tabs button.active span {
@@ -285,7 +285,7 @@
 }
 
 .pricing-section .pricing-card {
-  @apply h-full relative transition-all duration-500 ease-out border-4 border-[rgba(255,255,255,0.88)];
+  @apply h-full relative transition-all duration-500 ease-out border-2 border-[rgba(26,26,26,0.3)];
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(12px);  
   -webkit-backdrop-filter: blur(12px);
@@ -681,22 +681,391 @@
 
 /* Zigazag Full Section Start */
 .zigzag-wrapper-full {
-    @apply py-80 max-768:py-40;
-    background: linear-gradient(270deg, rgba(249, 249, 249, 0) 34.87%, #F9F9F9 47.92%), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(270deg, rgba(249, 249, 249, 0) 34.68%, #F9F9F9 59.72%);
+  @apply relative py-80 max-1024:py-40 bg-white overflow-hidden;
+}
+
+/* left gradient */
+.zigzag-wrapper-full::before {
+  content: "";
+  @apply absolute top-0 left-0 h-full w-[50%];
+  background: linear-gradient(
+    270deg,
+    rgba(249, 249, 249, 0) 34.87%,
+    #F9F9F9 79%
+  );
+  pointer-events: none;
+}
+
+/* right gradient */
+.zigzag-wrapper-full::after {
+  content: "";
+  @apply absolute top-0 right-0 h-full w-[50%];
+  background: linear-gradient(
+    90deg,
+    rgba(249, 249, 249, 0) 34.68%,
+    #F9F9F9 59.72%
+  );
+  pointer-events: none;
 }
 
 .zigzag-wrapper-full .zigzag-inner-full {
-    @apply flex items-center relative;
+    @apply flex items-center relative max-1200:flex-wrap max-1200:gap-40;
 }
 
 .zigzag-wrapper-full .zigzag-right {
-    @apply min-1024:max-w-640 min-1200:max-w-740 min-1600:w-auto;
+    @apply min-1024:max-w-640 min-1200:max-w-740 min-1600:w-auto relative z-1;
 }
 
-.zigzag-wrapper-full .zigzag-left .img {
-    @apply  top-0 right-0 h-auto;
+.zigzag-wrapper-full .community-zigzag-left img {
+    @apply relative z-1 min-1199:absolute min-1199:-top-[40px] min-1200:w-[828px] min-1199:h-[456px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[58%];
 }
 /* Zigazag Full Section End */
+
+/* Morning Section Start */
+.morning-section {
+    @apply relative py-40;
+}
+
+.morning-section .zigzag-inner {
+    @apply justify-between;
+}
+
+.morning-section::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full max-575:!bg-[linear-gradient(180deg,rgba(0,0,0,0)_40.68%,rgba(0,0,0,0.4)_60.4%),radial-gradient(53.15%_49.51%_at_11.96%_2%,#F4EEE3_0%,#C2B7A3_50.65%,#000000_100%)];
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0) 51.68%, rgba(0, 0, 0, 0.4) 91.4%), radial-gradient(53.15% 100.51% at 8.96% 13%, #F4EEE3 0%, #C2B7A3 50.65%, #000000 98%);
+}
+
+.morning-section h3 {
+    @apply !font-body capitalize mt-5;
+}
+
+.morning-section .zigzag-right {
+    @apply max-w-700;
+}
+/* Morning Section End */
+
+/* Reward Section Start */
+.reward-section {
+    @apply py-80 max-1024:py-40 bg-white;
+}
+
+.reward-section h3 {
+    @apply font-body text-heading-5 capitalize max-1024:mt-10;
+}
+
+.reward-section .reward-grid {
+    @apply grid grid-cols-4 gap-28 max-769:grid-cols-2 max-575:grid-cols-1;
+}
+
+.reward-section .reward-card .img {
+    @apply relative pt-[100%] max-575:pt-[70%];
+}
+
+.reward-section .reward-card .img img {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.reward-section h5 {
+    @apply text-body-2 leading-20 mt-20;
+}
+
+.contact-info {
+    @apply mt-34 flex flex-col gap-28 max-1024:gap-20;
+}
+
+.contact-info .email-list li {
+    @apply flex items-center gap-10;
+}
+
+.contact-info .email-list li a {
+    @apply font-extrabold transition-all duration-500;
+}
+
+.contact-info .email-list li a:hover {
+    @apply text-yellow;
+}
+
+.contact-info .social-handle {
+    @apply flex items-center gap-10;
+}
+
+.contact-info .social-handle li span {
+    @apply font-extrabold;
+}
+
+.contact-info .social-handle li img {
+    @apply w-20 h-20;
+}
+
+.contact-info .btn-custom {
+    @apply flex gap-10 items-center;
+}
+
+.contact-info .btn-custom a {
+    @apply flex gap-10 items-center;
+}
+
+.zigzag-wrapper-full .contact-zigzag-left img {
+    @apply relative z-1 min-1199:absolute min-1199:-top-[40px] min-1200:w-[800px] min-1199:h-[456px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[52%];
+}
+/* Reward Section End */
+
+/* Learning Section Start */
+.learning-section {
+    @apply py-80 max-1024:py-40;
+}
+
+.learning-section .content {
+    @apply mt-28 max-639:mt-20;
+}
+/* Learning Section End */
+
+/* Contact Form Start */
+.contact-form-section {
+    @apply py-80 max-1024:py-40 relative bg-center bg-no-repeat bg-cover;
+    background-image: url('/assets/images/facial-room.webp');
+}
+/* Contact Form End */
+
+/* Membership Section Start */
+.membership-section {
+    @apply py-80 max-1024:py-40 bg-black;
+}
+
+.membership-section h3 {
+    @apply font-body text-heading-5 capitalize font-normal leading-29 mt-4;
+}
+
+.membership-section .content {
+    @apply mt-28 max-639:mt-20;
+}
+/* Membership Section End */
+
+/* Image Slider Section Start */
+.image-slider-section {
+    @apply relative py-80 max-1024:py-40;
+}
+
+.image-slider-section.white-gradient::before {
+    background: linear-gradient(0deg, rgba(214, 207, 201, 0.88) 4.21%, rgba(214, 207, 201, 0.830036) 8.42%, rgba(214, 207, 201, 0.770928) 11.58%, rgba(214, 207, 201, 0.681814) 13.68%, rgba(214, 207, 201, 0) 16.84%), linear-gradient(180deg, rgba(214, 207, 201, 0.88) 36.11%, rgba(214, 207, 201, 0.830036) 44.13%, rgba(214, 207, 201, 0.770928) 56.17%, rgba(214, 207, 201, 0.681814) 62.79%, rgba(214, 207, 201, 0) 100.21%);
+}
+
+.image-slider-section .image-card-slider {
+    @apply mt-55 max-1024:mt-20;
+}
+
+.image-card-slider .swiper-slide {
+    @apply h-auto;
+}
+
+.image-slider-section .image-slide-card {
+    @apply p-28 max-575:p-20 bg-[rgba(255,255,255,0.88)] h-full relative;
+}
+
+.image-slide-card .play-icon img {
+    @apply absolute !top-1/3 w-36 h-40 z-2 left-1/2 -translate-x-1/2;
+}
+
+.image-card-slider .slide-img.img {
+    @apply pt-[62.26%] relative;
+}
+
+.image-card-slider .slide-img img {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.image-card-slider .slide-img::before {
+  @apply content-[''] absolute top-0 left-0 w-full h-full;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+  z-index: 1; /* overlay sits above img */
+}
+
+.image-card-slider .card-data {
+    @apply flex justify-between gap-20 mt-18 max-768:mt-20;
+}
+
+.image-card-slider .card-data .content {
+    @apply text-center max-w-466;
+}
+
+.image-card-slider .card-data img {
+    @apply static w-14 h-14 object-fill;
+}
+
+.image-card-slider .title {
+    @apply text-slate-gray text-center mt-14;
+}
+
+.image-slider-pagination {
+    @apply flex justify-center gap-28 items-center mt-55 max-1024:mt-30;
+}
+
+.image-slider-pagination .img, .image-slider-pagination img {
+    @apply !static p-0 !w-auto !h-auto cursor-pointer;
+}
+/* Image Slider Section End */
+
+/* Wellness Section Start */
+.wellness-section {
+    @apply py-80 max-1024:py-40;
+}
+
+.wellness-section .zigzag-blog {
+    @apply flex justify-between items-center gap-55 mt-55 max-1024:mt-40 max-1199:flex-col max-1199:gap-40;
+}
+
+.wellness-section .blog-image {
+    @apply w-6/12 max-1199:w-full;
+}
+
+.wellness-section .blog-image .img {
+    @apply relative pt-[66.88%];
+}
+
+.wellness-section .blog-image img {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.wellness-section .blog-detail {
+    @apply flex flex-col gap-14 max-w-628 max-1199:max-w-full;
+}
+
+.wellness-section .btn-custom {
+    @apply flex gap-10;
+}
+
+.wellness-section .btn-custom a {
+    @apply font-extrabold uppercase relative inline-block;
+}
+
+.wellness-section .btn-custom a::after {
+    @apply content-[''] absolute bottom-0 left-0 h-2 w-0 bg-black transition-all duration-700;
+}
+
+.wellness-section .btn-custom a:hover::after {
+    @apply w-full;
+}
+
+.wellness-section .filter-bar {
+    @apply max-w-400 border-2 border-black mt-55 max-1024:mt-40 flex items-center h-40 px-20 max-575:px-10;
+}
+
+.wellness-section .filter-bar label {
+    @apply text-slate-gray ms-10 w-80;
+}
+
+.wellness-section .filter-bar select {
+    @apply w-full font-extrabold text-slate-gray;
+}
+
+.wellness-section .filter-bar option {
+    @apply font-extrabold;
+}
+/* Wellness Section End */
+
+/* Grid Section Start */
+.grid-section {
+    @apply py-80 max-1024:py-40;
+}
+
+.blog-grid-section {
+    @apply bg-black;
+}
+
+.card-grid {
+    @apply grid grid-cols-3 max-575:grid-cols-1 max-769:grid-cols-2 gap-55 max-1024:gap-40 max-769:gap-20 mt-55 max-1024:mt-40;
+}
+
+.card-grid .grid-card h4 {
+    @apply text-body-1 leading-24;
+}
+
+.card-grid .grid-card .img {
+    @apply relative pt-[75%];
+}
+
+.card-grid .grid-card .img img {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.card-grid .grid-card-data {
+    @apply flex flex-col gap-14 text-center mt-14;
+}
+
+.card-grid .read-more-btn {
+    @apply flex gap-10 justify-center;
+}
+
+.grid-section .read-more-btn a {
+    @apply uppercase font-extrabold relative;
+}
+
+.grid-section .read-more-btn a::after {
+    @apply content-[''] bg-current absolute bottom-0 left-0 h-2 w-0 transition-all duration-700;
+}
+
+.grid-section .read-more-btn a:hover::after {
+    @apply w-full;
+}
+
+.card-grid .btn-custom {
+    @apply flex justify-center gap-10 items-center;
+}
+/* Grid Section End */
+
+/* Community Grid Start */
+.community-grid-section {
+    @apply relative bg-[url('/assets/images/facial-room.webp')] bg-cover bg-center bg-no-repeat;
+}
+
+.community-grid-section::before {
+  content: "";
+  @apply absolute inset-0;
+  background: linear-gradient(
+    359.75deg,
+    rgba(214, 207, 201, 0.88) 7.45%,
+    rgba(214, 207, 201, 0.830036) 14.61%,
+    rgba(214, 207, 201, 0.770928) 19.97%,
+    rgba(214, 207, 201, 0.681814) 23.55%,
+    rgba(214, 207, 201, 0) 28.92%
+  );
+}
+
+.community-grid-section::after {
+  content: "";
+  @apply absolute inset-0;
+  background: linear-gradient(
+    180deg,
+    rgba(214, 207, 201, 0.88) 28.82%,
+    rgba(214, 207, 201, 0.830036) 37.78%,
+    rgba(214, 207, 201, 0.770928) 49.21%,
+    rgba(214, 207, 201, 0.681814) 55.5%,
+    rgba(214, 207, 201, 0) 80.88%
+  );
+}
+/* Community Grid End */
+
+/* 404 Start */
+.error-banner {
+    @apply py-80 max-1024:py-40 bg-white flex items-center min-1800:h-screen;
+}
+
+.error-banner .error {
+    @apply flex gap-55 items-center max-w-967 mx-auto max-769:flex-col max-1200:gap-30;
+}
+
+.error-banner .error .title {
+    @apply max-769:text-center
+}
+
+.error-banner .error strong {
+    @apply block;
+}
+/* 404 End */
 
 /* Common Card Start */
 .gradient-card {
@@ -715,4 +1084,8 @@
 
 .current-menu-item {
     @apply text-yellow;
+}
+
+body.black-header nav {
+    @apply bg-black static;
 }

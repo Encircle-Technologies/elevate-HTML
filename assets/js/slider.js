@@ -212,12 +212,53 @@ const initSliders = () => {
     });
   };
 
+  const initImageCardSlider = () =>{
+    const cardSliderEl = document.querySelector('.image-card-slider');
+    if (!cardSliderEl) return;
+
+    new Swiper('.image-card-slider', {
+      spaceBetween: 20,
+      speed: 500,
+      loop: true,
+      allowTouchMove: true,
+      centeredSlides: true,
+      initialSlide: 1,
+      autoplay: {
+        delay: 2500,
+      },
+      navigation: {
+        nextEl: ".image-slider-pagination .next",
+        prevEl: ".image-slider-pagination .previous",
+      },
+      breakpoints: {
+        375: {
+          slidesPerView: 1.3,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2.8,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        1200: {
+          slidesPerView: 2.6,
+          spaceBetween: 28,
+          autoplay: false,
+        }
+      }
+    });
+  }
+
   initNavSlider();
   initHeroSlider();
   initCardSlider();
   initPricingSlider();
   initTestimonialSlider();
   initValueSlider();
+  initImageCardSlider();
 };
 
 export default initSliders;
