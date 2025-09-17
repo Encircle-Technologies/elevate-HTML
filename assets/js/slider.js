@@ -7,6 +7,12 @@ export const initPricingSlider = () => {
     cardSliderEl.swiper.destroy(true, true);
   }
 
+  // read slidesPerView from parent section (default = 4)
+  const parentSection = cardSliderEl.closest('.pricing-section');
+  const customSlides = parentSection?.dataset.slides 
+    ? parseInt(parentSection.dataset.slides, 10) 
+    : 4;
+
   new Swiper('.pricing-slider', {
     spaceBetween: 20,
     speed: 500,
@@ -21,8 +27,8 @@ export const initPricingSlider = () => {
       375: { slidesPerView: 1, spaceBetween: 16 },
       640: { slidesPerView: 2, spaceBetween: 20 },
       768: { slidesPerView: 2, centeredSlides: false, spaceBetween: 24 },
-      1024: { slidesPerView: 3, spaceBetween: 28, loop: false },
-      1200: { slidesPerView: 4, spaceBetween: 32 },
+      1024: { slidesPerView: Math.min(3, customSlides), spaceBetween: 28, loop: false },
+      1200: { slidesPerView: customSlides, spaceBetween: 32 },
     },
   });
 };

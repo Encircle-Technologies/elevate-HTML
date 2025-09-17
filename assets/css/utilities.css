@@ -684,27 +684,10 @@
   @apply relative py-80 max-1024:py-40 bg-white overflow-hidden;
 }
 
-/* left gradient */
 .zigzag-wrapper-full::before {
   content: "";
-  @apply absolute top-0 left-0 h-full w-[50%];
-  background: linear-gradient(
-    270deg,
-    rgba(249, 249, 249, 0) 34.87%,
-    #F9F9F9 79%
-  );
-  pointer-events: none;
-}
-
-/* right gradient */
-.zigzag-wrapper-full::after {
-  content: "";
-  @apply absolute top-0 right-0 h-full w-[50%];
-  background: linear-gradient(
-    90deg,
-    rgba(249, 249, 249, 0) 34.68%,
-    #F9F9F9 59.72%
-  );
+  @apply absolute top-0 left-0 w-full h-full;
+  background: linear-gradient(270deg, rgba(249, 249, 249, 0) 42.87%, #F9F9F9 51.92%), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(270deg, rgba(249, 249, 249, 0) 24.68%, #F9F9F9 59.72%);
   pointer-events: none;
 }
 
@@ -718,6 +701,21 @@
 
 .zigzag-wrapper-full .community-zigzag-left img {
     @apply relative z-1 min-1199:absolute min-1199:-top-[40px] min-1200:w-[828px] min-1199:h-[456px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[58%];
+    -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 20%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0) -3%,
+    rgba(0,0,0,5) 7%
+  );
+  mask-repeat: no-repeat;
+  mask-size: cover;
 }
 /* Zigazag Full Section End */
 
@@ -762,13 +760,15 @@
 }
 
 .reward-section .reward-card .img img {
-    @apply absolute top-0 left-0 w-full h-full;
+    @apply absolute top-0 left-0 w-full h-full object-cover;
 }
 
 .reward-section h5 {
     @apply text-body-2 leading-20 mt-20;
 }
+/* Reward Section End */
 
+/* Contact Zigzag Start */
 .contact-info {
     @apply mt-34 flex flex-col gap-28 max-1024:gap-20;
 }
@@ -807,8 +807,23 @@
 
 .zigzag-wrapper-full .contact-zigzag-left img {
     @apply relative z-1 min-1199:absolute min-1199:-top-[40px] min-1200:w-[800px] min-1199:h-[456px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[52%];
+    -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 20%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0) -3%,
+    rgba(0,0,0,5) 7%
+  );
+  mask-repeat: no-repeat;
+  mask-size: cover;
 }
-/* Reward Section End */
+/* Contact Zigzag End */
 
 /* Learning Section Start */
 .learning-section {
@@ -824,6 +839,11 @@
 .contact-form-section {
     @apply py-80 max-1024:py-40 relative bg-center bg-no-repeat bg-cover;
     background-image: url('/assets/images/facial-room.webp');
+}
+
+.contact-form-section::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    background: linear-gradient(0deg, rgba(214, 207, 201, 0.88) 7.28%, rgba(214, 207, 201, 0.830036) 14.56%, rgba(214, 207, 201, 0.770928) 20.02%, rgba(214, 207, 201, 0.681814) 23.67%, rgba(214, 207, 201, 0) 29.13%), linear-gradient(180deg, rgba(214, 207, 201, 0.88) 22.54%, rgba(214, 207, 201, 0.830036) 27.55%, rgba(214, 207, 201, 0.770928) 35.06%, rgba(214, 207, 201, 0.681814) 39.19%, rgba(214, 207, 201, 0) 45.07%);
 }
 /* Contact Form End */
 
