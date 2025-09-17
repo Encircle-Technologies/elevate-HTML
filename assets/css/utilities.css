@@ -402,40 +402,63 @@
 
 /* Journey Section Start */
 .journey-section {
-    @apply py-80 relative max-575:py-40;
+    @apply py-68 relative max-575:py-40;
 }
 
 .journey-section::before {
     @apply content-[''] absolute top-0 left-0 w-full h-full max-575:!bg-[linear-gradient(180deg,rgba(0,0,0,0)_30.95%,#000000_41.4%),radial-gradient(60.4%_24.89%_at_20.08%_6.44%,#F4EEE3_0%,#C2B7A3_55%,#000000_110.16%)] bg-center bg-cover bg-no-repeat;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.68%, rgba(0, 0, 0, 0.4) 91.4%), radial-gradient(
-    45% 90% at 15% 30%,
-    #F4EEE3 0%, 
-    #C2B7A3 30.65%, 
-    #000000 100%
-    );
+    background: linear-gradient(#0000 80.68%,#0006 91.4%),radial-gradient(53% 110% at 10% 18%,#f4eee3,#c2b7a3 30.65%,#000);
 }
 
 .journey-section .zigzag-inner {
-    @apply min-1512:justify-center
+    @apply !gap-120 max-1200:!gap-40 max-1200:!flex-col max-1600:!justify-center;
 }
 
-.journey-section .zigzag-inner img {
-    @apply min-1200:w-500;
+.journey-section .zigzag-left img {
+    @apply max-575:!w-200 min-1600:w-500 min-1024:w-450;
+}
+
+.journey-section .global-list {
+    @apply flex flex-col gap-10;
+}
+
+.journey-section .global-list li {
+    @apply text-white relative ps-20;
+}
+
+.journey-section .global-list li::before {
+    content: "";
+    @apply absolute top-8 left-0 w-8 h-8 bg-yellow rounded-full;
+}
+
+.journey-section .journey-left {
+    @apply relative;
+}
+
+.journey-section img {
+    @apply h-auto max-575:h-auto max-575:w-150;
+}
+
+.journey-section .btn-custom {
+    @apply flex items-center gap-10 mt-10 flex-wrap;
 }
 
 .journey-section .btn-custom a {
-    @apply flex items-center gap-10 mt-10 max-575:min-w-199 max-575:justify-start;
+    @apply flex items-center gap-10 max-575:min-w-199;
 }
 
 .journey-section .btn-custom a img {
-  @apply transition-all duration-300 ease-linear;
-  transition-property: filter, transform;
+    @apply w-24 h-24;
 }
 
-.journey-section .btn-custom a:hover img {
-  filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(462%) hue-rotate(228deg) brightness(120%) contrast(100%);
-}
+.journey-section .btn-custom a img {
+    @apply transition-all duration-300 ease-linear;
+    transition-property: filter, transform;
+  }
 
+  .journey-section .btn-custom a:hover img {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(462%) hue-rotate(228deg) brightness(120%) contrast(100%);
+  }
 /* Journey Section End */
 
 /* Stylist Section Start */
@@ -472,7 +495,7 @@
 }
 /* Stylist Section End */
 
-/* Different Section Start */
+/* Different grid Section Start */
 .different-section {
     @apply py-80 max-575:py-40 bg-black;
 }
@@ -500,7 +523,7 @@
 .different-card .card-info {
     @apply flex flex-col gap-14 mt-28;
 }
-/* Different Section End */
+/* Different grid Section End */
 
 /* Brand Section Start */
 .brand-section {
@@ -549,7 +572,7 @@
 }
 
 .value-card-slider .value-card-inner {
-    @apply flex flex-col p-28 h-full items-center border-2 border-yellow justify-center;
+    @apply flex flex-col p-26 h-full items-center border-2 border-yellow;
 }
 
 .value-card-slider .title {
@@ -566,7 +589,7 @@
 }
 
 .value-section .value-card .title {
-    @apply max-w-340 mx-auto text-center;
+    @apply max-w-376 text-center;
 }
 /* Our Values Section End */
 
@@ -901,7 +924,7 @@
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2)
   );
-  z-index: 1; /* overlay sits above img */
+  z-index: 1;
 }
 
 .image-card-slider .card-data {
@@ -1087,6 +1110,56 @@
 }
 /* 404 End */
 
+/* Newsletter Form start */
+.newsletter .news-letter-form {
+    @apply mt-20;
+}
+
+.newsletter .news-letter-form form .submit-btn {
+    @apply max-575:text-center;
+}
+
+.newsletter .news-letter-form label {
+    @apply text-softwhite;
+}
+
+.newsletter input:focus {
+    @apply !outline-none;
+}
+
+.newsletter input[type="email"] {
+    @apply py-10 px-20 bg-white w-full mt-10 text-black;
+}
+
+.newsletter input::placeholder {
+    @apply opacity-50;
+}
+
+.newsletter input[type="submit"] {
+    @apply cursor-pointer;
+}
+
+.newsletter .news-letter-form .btn-yellow {
+    @apply max-1200:max-w-234 mx-auto mt-20;
+}
+
+.newsletter .wpcf7-spinner {
+    @apply hidden;
+}
+
+.news-letter-form .wpcf7-not-valid-tip {
+    @apply mt-10 -mb-20;
+}
+
+.news-letter-form .wpcf7-form.sent .wpcf7-response-output {
+    @apply text-[#46b450];
+}
+
+.news-letter-form .wpcf7-response-output {
+    @apply !border-0 text-[#dc3232] !mt-10 !m-0 !p-0;
+}
+/* Newsletter Form End */
+
 /* Common Card Start */
 .gradient-card {
     @apply relative;
@@ -1108,4 +1181,149 @@
 
 body.black-header nav {
     @apply bg-black static;
+}
+
+footer .FeedLayout__wrapper {
+    @apply mt-20;
+}
+
+.home .zigzag-wrapper.right-image .inline-title span {
+    @apply !block;
+}
+
+body.about .zigzag-wrapper {
+    @apply py-30;
+}
+
+body.about .zigzag-inner img {
+    @apply w-300;
+}
+
+.current-menu-item a {
+    @apply !text-yellow;
+}
+
+.cmn-content {
+    @apply py-80 max-1024:py-40;
+}
+
+.cmn-content h2 {
+    @apply font-bold text-black text-heading-5 leading-29 mb-4 max-575:text-heading-6 max-575:leading-24;
+}
+
+.cmn-content .anim-item p:nth-of-type(1) {
+    @apply text-body-1 leading-25 font-body !text-black;
+}
+
+.cmn-content .anim-item p {
+    @apply text-slate-gray;
+}
+
+.cmn-content .anim-item h3 {
+    @apply font-bold text-heading-5 leading-24 mt-55 mb-14 max-1024:mt-40 max-768:mt-20 max-575:text-heading-6 max-575:leading-24;
+}
+
+.cmn-content .global-list ul {
+    @apply ms-20 max-575:ms-0;
+}
+
+.cmn-content .global-list ul li {
+    @apply ps-15 text-slate-gray;
+}
+
+.cmn-content .global-list ul li:before {
+    @apply bg-black top-4;
+}
+
+.cmn-content p + ul {
+    @apply mt-14 mb-28 max-769:mb-14;
+}
+
+.cmn-content p a {
+    @apply text-black font-extrabold transition-all duration-600 ease-in-out;
+}
+
+.cmn-content p a:hover {
+    @apply text-yellow;
+}
+
+body.privacy-policy .cmn-content .anim-item p:nth-of-type(1),
+body.accesibilty-statement .cmn-content .anim-item p:nth-of-type(1) {
+    @apply !text-slate-gray !text-body-2;
+}
+
+.bloglist__data {
+    @apply grid grid-cols-3 max-575:grid-cols-1 max-769:grid-cols-2 gap-55 max-1024:gap-40 max-769:gap-20 mt-55 max-1024:mt-40;
+}
+
+.search-input-bar {
+    @apply max-w-400 border-2 border-black mt-55 max-1024:mt-40 flex items-center h-40 px-20 max-575:px-10 bg-no-repeat ms-auto;
+    background-image: url('../images/yellow-search-icon.svg');
+    background-position: top 8px left 10px;
+}
+
+.search-input-bar .search-form, .search-input-bar input {
+    @apply w-full ps-10;
+}
+
+.contact-form-wrapper form {
+    @apply max-w-1000 mx-auto mt-55 max-1024:mt-40;
+}
+
+.contact-form-wrapper form .form-grid {
+    @apply flex flex-col gap-20;
+}
+
+.contact-form-wrapper form .form-row {
+    @apply flex flex-wrap;
+}
+
+.contact-form-wrapper .form-row .form-field {
+    @apply px-10 min-1024:w-1/2 w-full;
+}
+
+.contact-form-wrapper .email-field {
+    @apply max-1024:mt-20;
+}
+
+.contact-form-wrapper .message-field {
+    @apply !w-full;
+}
+
+.contact-form-wrapper form .form-row .form-field p {
+    @apply w-full;
+}
+
+.contact-form-wrapper .form-row .form-field p span input,
+.contact-form-wrapper .form-row .form-field p span textarea {
+    @apply w-full border-2 border-black bg-white py-10 px-20 mt-10;
+}
+
+.captcha-field {
+    @apply h-76 !w-auto;
+}
+
+.contact-form-wrapper input[type="submit"] {
+    @apply cursor-pointer;
+}
+
+.contact-form-wrapper .submit-btn p {
+  @apply relative overflow-hidden leading-16 px-25 py-10 uppercase bg-black text-yellow z-10 font-extrabold cursor-pointer inline-flex items-center;
+}
+
+.contact-form-wrapper .submit-btn p:hover {
+  @apply text-black;
+}
+
+.contact-form-wrapper .submit-btn p::before {
+  content: "";
+  @apply absolute top-0 right-0 w-0 h-full bg-yellow transition-all duration-300 ease-linear -z-1;
+}
+
+.contact-form-wrapper .submit-btn p:hover::before {
+  @apply w-full left-0;
+}
+
+.contact-form-wrapper .wpcf7-spinner {
+    @apply hidden;
 }
