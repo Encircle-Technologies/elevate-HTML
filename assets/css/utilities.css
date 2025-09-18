@@ -753,7 +753,7 @@
 
 .morning-section::before {
     @apply content-[''] absolute top-0 left-0 w-full h-full max-575:!bg-[linear-gradient(180deg,rgba(0,0,0,0)_40.68%,rgba(0,0,0,0.4)_60.4%),radial-gradient(53.15%_49.51%_at_11.96%_2%,#F4EEE3_0%,#C2B7A3_50.65%,#000000_100%)];
-    background:linear-gradient(180deg, rgba(0, 0, 0, 0) 51.68%, rgba(0, 0, 0, 0.4) 91.4%), radial-gradient(53.15% 100.51% at 8.96% 13%, #F4EEE3 0%, #C2B7A3 50.65%, #000000 98%);
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0) 88.68%, rgba(0, 0, 0, 0.4) 91.4%),radial-gradient(54.15% 67.51% at 8.96% 13%, #F4EEE3 0%, #C2B7A3 33.65%, #000000 120%);
 }
 
 .morning-section h3 {
@@ -901,12 +901,16 @@
     @apply h-auto;
 }
 
+.image-card-slider .swiper-slide .video-wrapper a img {
+    position: inherit;
+}
+
 .image-slider-section .image-slide-card {
     @apply p-28 max-575:p-20 bg-[rgba(255,255,255,0.88)] h-full relative;
 }
 
 .image-slide-card .play-icon img {
-    @apply absolute !top-1/3 w-36 h-40 z-2 left-1/2 -translate-x-1/2;
+    @apply !absolute !top-1/3 w-36 h-40 z-2 left-1/2 -translate-x-1/2 max-575:!top-1/5;
 }
 
 .image-card-slider .slide-img.img {
@@ -1326,4 +1330,28 @@ body.accesibilty-statement .cmn-content .anim-item p:nth-of-type(1) {
 
 .contact-form-wrapper .wpcf7-spinner {
     @apply hidden;
+}
+
+@media (max-width: 1200px) {
+  .zigzag-wrapper-full .community-zigzag-left img {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0,0,0,0) 0%,    
+      rgba(0,0,0,1) 15%,
+      rgba(0,0,0,1) 85%,
+      rgba(0,0,0,0) 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+
+    mask-image: linear-gradient(
+      to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 15%,
+      rgba(0,0,0,1) 85%,
+      rgba(0,0,0,0) 100%
+    );
+    mask-repeat: no-repeat;
+    mask-size: cover;
+  }
 }

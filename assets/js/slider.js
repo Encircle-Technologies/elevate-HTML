@@ -229,9 +229,9 @@ const initSliders = () => {
       allowTouchMove: true,
       centeredSlides: true,
       initialSlide: 1,
-      autoplay: {
-        delay: 2500,
-      },
+      // autoplay: {
+      //   delay: 2500,
+      // },
       navigation: {
         nextEl: ".image-slider-pagination .next",
         prevEl: ".image-slider-pagination .previous",
