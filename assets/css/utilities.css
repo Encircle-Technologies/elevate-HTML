@@ -704,7 +704,7 @@
 
 /* Zigazag Full Section Start */
 .zigzag-wrapper-full {
-  @apply relative py-80 max-1024:py-40 bg-white overflow-hidden;
+  @apply relative py-95 max-1024:py-40 bg-white overflow-hidden;
 }
 
 .zigzag-wrapper-full::before {
@@ -723,7 +723,7 @@
 }
 
 .zigzag-wrapper-full .community-zigzag-left img {
-    @apply relative z-1 min-1199:absolute min-1199:-top-[40px] min-1200:w-[828px] min-1199:h-[456px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[58%];
+    @apply relative z-1 min-1199:absolute min-1199:-top-[123px] min-1200:w-[920px] min-1199:h-[496px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[56%];
     -webkit-mask-image: linear-gradient(
     to right,
     rgba(0,0,0,0) 0%,
@@ -734,8 +734,8 @@
 
   mask-image: linear-gradient(
     to right,
-    rgba(0,0,0,0) -3%,
-    rgba(0,0,0,5) 7%
+    rgba(0,0,0,0) -1%,
+    rgba(0,0,0,5) 17%
   );
   mask-repeat: no-repeat;
   mask-size: cover;
