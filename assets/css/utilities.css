@@ -704,7 +704,7 @@
 
 /* Zigazag Full Section Start */
 .zigzag-wrapper-full {
-  @apply relative py-95 max-1024:py-40 bg-white overflow-hidden;
+  @apply relative py-95 max-1200:py-40 bg-white overflow-hidden;
 }
 
 .zigzag-wrapper-full::before {
@@ -829,7 +829,7 @@
 }
 
 .zigzag-wrapper-full .contact-zigzag-left img {
-    @apply relative z-1 min-1199:absolute min-1199:-top-[40px] min-1200:w-[800px] min-1199:h-[456px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[52%];
+    @apply relative z-1 min-1199:absolute min-1199:-top-[110px] min-1200:w-[865px] min-1199:h-[550px] min-1200:left-[65%] min-1365:left-[62%] min-1441:left-[52%];
     -webkit-mask-image: linear-gradient(
     to right,
     rgba(0,0,0,0) 0%,
@@ -840,8 +840,8 @@
 
   mask-image: linear-gradient(
     to right,
-    rgba(0,0,0,0) -3%,
-    rgba(0,0,0,5) 7%
+    rgba(0,0,0,0) -1%,
+    rgba(0,0,0,5) 22%
   );
   mask-repeat: no-repeat;
   mask-size: cover;
@@ -1351,6 +1351,45 @@ body.accesibilty-statement .cmn-content .anim-item p:nth-of-type(1) {
       rgba(0,0,0,1) 85%,
       rgba(0,0,0,0) 100%
     );
+    mask-repeat: no-repeat;
+    mask-size: cover;
+  }
+
+  .zigzag-wrapper-full .contact-zigzag-left img {
+    -webkit-mask-image: 
+      linear-gradient(
+        to right,   /* left + right fade */
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0) 100%
+      ),
+      linear-gradient(
+        to top,     /* bottom fade */
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 100%
+      );
+    -webkit-mask-composite: destination-in; /* Chrome/WebKit */
+    mask-composite: intersect;              /* Standard */
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+
+    mask-image:
+      linear-gradient(
+        to right,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 22%,
+        rgba(0,0,0,1) 78%,
+        rgba(0,0,0,0) 100%
+      ),
+      linear-gradient(
+        to top,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 7%,
+        rgba(0,0,0,1) 100%
+      );
+    mask-composite: intersect;
     mask-repeat: no-repeat;
     mask-size: cover;
   }
