@@ -860,13 +860,20 @@
 
 /* Contact Form Start */
 .contact-form-section {
-    @apply py-80 max-1024:py-40 relative bg-center bg-no-repeat bg-cover;
-    background-image: url('/assets/images/facial-room.webp');
+    @apply py-80 max-1024:py-40 relative;
+}
+
+.contact-form-section img:first-child {
+    @apply absolute top-0 left-0 h-full w-full object-cover;
 }
 
 .contact-form-section::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    @apply content-[''] absolute top-0 left-0 w-full h-full z-1;
     background: linear-gradient(0deg, rgba(214, 207, 201, 0.88) 7.28%, rgba(214, 207, 201, 0.830036) 14.56%, rgba(214, 207, 201, 0.770928) 20.02%, rgba(214, 207, 201, 0.681814) 23.67%, rgba(214, 207, 201, 0) 29.13%), linear-gradient(180deg, rgba(214, 207, 201, 0.88) 22.54%, rgba(214, 207, 201, 0.830036) 27.55%, rgba(214, 207, 201, 0.770928) 35.06%, rgba(214, 207, 201, 0.681814) 39.19%, rgba(214, 207, 201, 0) 45.07%);
+}
+
+.contact-form-section h2 {
+    @apply relative z-1;
 }
 /* Contact Form End */
 
