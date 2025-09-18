@@ -81,7 +81,7 @@ header .search-bar input {
   background-image: url('/assets/images/magnifier-icon.svg');
   background-repeat: no-repeat;
   background-size: 20px;
-  background-position: top 12px left 10px;
+  background-position: top 10px left 10px;
   padding-inline-start: 40px;
 }
 header .search-bar input::placeholder {
@@ -97,7 +97,7 @@ header .menu-toggle.active img {
   filter: brightness(0) saturate(100%) invert(80%) sepia(15%) saturate(305%) hue-rotate(0deg) brightness(90%) contrast(91%);
 }
 .nav-wrapper.mobile-menu {
-  @apply absolute top-full left-0 max-1200:w-full bg-white opacity-0 invisible transition-all duration-300 ease-in-out flex-col min-1200:static min-1200:flex min-1200:flex-row min-1200:bg-transparent min-1200:opacity-100 min-1200:visible;
+  @apply absolute top-full left-0 max-1200:w-full bg-softwhite opacity-0 invisible transition-all duration-300 ease-in-out flex-col min-1200:static min-1200:flex min-1200:flex-row min-1200:bg-transparent min-1200:opacity-100 min-1200:visible;
 }
 .nav-wrapper.mobile-menu.hidden {
   @apply opacity-0 invisible;

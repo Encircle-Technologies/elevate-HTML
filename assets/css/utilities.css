@@ -1073,33 +1073,11 @@
 
 /* Community Grid Start */
 .community-grid-section {
-    @apply relative bg-[url('/assets/images/facial-room.webp')] bg-cover bg-center bg-no-repeat;
+    @apply relative;
 }
 
-.community-grid-section::before {
-  content: "";
-  @apply absolute inset-0;
-  background: linear-gradient(
-    359.75deg,
-    rgba(214, 207, 201, 0.88) 7.45%,
-    rgba(214, 207, 201, 0.830036) 14.61%,
-    rgba(214, 207, 201, 0.770928) 19.97%,
-    rgba(214, 207, 201, 0.681814) 23.55%,
-    rgba(214, 207, 201, 0) 28.92%
-  );
-}
-
-.community-grid-section::after {
-  content: "";
-  @apply absolute inset-0;
-  background: linear-gradient(
-    180deg,
-    rgba(214, 207, 201, 0.88) 28.82%,
-    rgba(214, 207, 201, 0.830036) 37.78%,
-    rgba(214, 207, 201, 0.770928) 49.21%,
-    rgba(214, 207, 201, 0.681814) 55.5%,
-    rgba(214, 207, 201, 0) 80.88%
-  );
+.community-grid-section img:first-child {
+    @apply absolute top-0 left-0 w-full h-full;
 }
 /* Community Grid End */
 

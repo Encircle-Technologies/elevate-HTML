@@ -142,12 +142,12 @@
     @apply text-white;
 }
 
-.bg-cream {
-    @apply relative;
-}
-
 .max-w-content {
     @apply max-w-1000 mx-auto text-center;
+}
+
+.bg-cream {
+    @apply relative;
 }
 
 .bg-cream .container-fluid-lg, .bg-cream .container-fluid-sm, .bg-cream .container-fluid {
@@ -182,9 +182,9 @@
     @apply relative z-2;
 }
 
-.white-gradient::before{
+.white-gradient::before {
     @apply content-[''] absolute top-0 left-0 w-full h-full z-1;
-    background: linear-gradient(360deg, rgba(214, 207, 201, 0.88) 10.33%, rgba(214, 207, 201, 0) 28.92%, rgba(214, 207, 201, 0) 64.02%, rgba(214, 207, 201, 0.88) 75.64%);
+    background: linear-gradient(360deg, #d6cfc9e0 31.33%, #d6cfc900 35.92%, #d6cfc900 .02%, #d6cfc9e0 50.64%);
 }
 
 .white-gradient img:first-child {
